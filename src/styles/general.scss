@@ -1,3 +1,22 @@
+@use "./partials/variables" as *;
+
+//DEBUG
 body {
-    background-color: lightsteelblue;
+    background-color: $bg-chevron-slider;
+}
+
+
+// RESET
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+img {
+    max-width: 100%;
 }

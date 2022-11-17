@@ -3,16 +3,16 @@ import { store } from "./store";
 import AppHeader from "./components/AppHeader.vue";
 import AppBanner from "./components/AppBanner.vue";
 import AppMainDebug from "./components/AppMainDebug.vue";
-import AppFooterTop from "./components/AppFooterTop.vue";
-import AppFooterBottom from "./components/AppFooterBottom.vue";
+import AppCallToAction from "./components/AppCallToAction.vue";
+import AppFooter from "./components/AppFooter.vue";
 
 export default {
   components: {
     AppHeader,
     AppBanner,
     AppMainDebug,
-    AppFooterTop,
-    AppFooterBottom,
+    AppCallToAction,
+    AppFooter,
   },
   data() {
     return {
@@ -49,11 +49,11 @@ export default {
     <!-- / Wrapper Main -->
 
     <!-- Footer -->
-    <div class="wrapper-footer">
-      <AppFooterTop class="mt-4" />
+    <div class="wrapper-cta">
+      <AppCallToAction class="mt-4" />
     </div>
 
-    <AppFooterBottom />
+    <AppFooter />
     <!-- / Footer -->
 
   </div>
@@ -64,7 +64,7 @@ export default {
 @use "./styles/general.scss" as *;
 
 .wrapper-jumbotron,
-.wrapper-footer {
+.wrapper-cta {
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -75,7 +75,7 @@ export default {
   background-image: url("../src/assets/img/hero-header-bakery.jpg");
 }
 
-.wrapper-footer {
+.wrapper-cta {
   background-image: url("../src/assets/img/call-to-action-bg.jpg");
 }
 </style>

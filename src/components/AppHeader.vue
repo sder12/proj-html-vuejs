@@ -81,7 +81,7 @@ export default {
 
 .header {
     height: $header-height;
-    padding: 2.8em 1em;
+    padding: 2.8em 1em 0;
     @include flex(row, space-between, center);
 
     &__logo img {

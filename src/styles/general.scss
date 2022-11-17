@@ -3,15 +3,6 @@
 
 @use "./partials/variables" as *;
 
-//DEBUG
-body {
-    background-color: $bg-chevron-slider;
-    // font-family: "Work Sans", sans-serif;
-    font-family: "Source Serif 4", serif;
-
-}
-
-
 // RESET
 * {
     margin: 0;
@@ -21,8 +12,29 @@ body {
 
 html {
     font-size: 100%;
+    font-family: "Work Sans", sans-serif;
+    // font-family: "Source Serif 4", serif;
 }
 
 img {
     max-width: 100%;
+}
+
+//LAYOUT
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    //DEBUG
+    background-color: red;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.wrapper-jumbotron {
+    //DEBUG
+    background-color: goldenrod;
 }

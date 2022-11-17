@@ -5,11 +5,13 @@ export default {
 </script>
 
 <template>
+    <!-- Order cta -->
     <div class="cta">
         <span>try our seasonal products</span>
         <h3>Order for pick-up or delivery to your home</h3>
         <button class="btn btn-light">Shop Now</button>
     </div>
+    <!-- / Order cta -->
 </template>
 
 <style lang="scss" scoped>
@@ -18,5 +20,9 @@ export default {
 .cta {
     padding: 5em 10em;
     color: $lighten-txt;
+
+    h3 {
+        margin: .5em 0 2em;
+    }
 }
 </style>

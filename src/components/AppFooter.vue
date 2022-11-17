@@ -9,9 +9,10 @@ export default {
 </script>
 
 <template>
-    <footer class="footer">
+    <footer class="footer px-2">
         <!-- FOOTER TOP -->
         <section class="footer-top">
+            <!-- Footer Nav -->
             <div class="footer-nav">
                 <div class="footer-nav__logo">
                     <img src="../assets/img/logo/avada-bakery-logo-retina-200x97.png" alt="Bakery logo">
@@ -23,10 +24,9 @@ export default {
                             {{ link.name }}
                         </a>
                     </li>
-
                 </ul>
-
             </div>
+            <!-- Footer Subscribe -->
             <div class="footer-subscribe">
                 <h4>Subscribe to our Newsletter</h4>
                 <div class="subscribe-email">
@@ -37,12 +37,15 @@ export default {
             </div>
         </section>
         <!-- / FOOTER TOP -->
+
         <!-- FOOTER BOTTOM -->
-        <section class="footer-bottom">
+        <section class="footer-bottom mt-3">
+            <!-- Footer Copyright -->
             <div class="footer-copyright">
                 <span> &copy; Copyright 2012 - 2020 | Avada Theme by ThemeFusion | All Rights Reserved | Powered by
                     Wordpress</span>
             </div>
+            <!-- Footer Social -->
             <div class="footer-social">
                 instagram - twitter - facebook - pinterest
             </div>
@@ -55,16 +58,15 @@ export default {
 @use "../styles/partials/variables" as*;
 @use "../styles/partials/mixins" as*;
 
-.footer {
-    padding: 0 2em 4em;
-}
-
+//Flexing the two row 
+//1.row(nav-subscribe) vs 2.row(copyright-social)
 .footer-top,
 .footer-bottom {
     @include flex(row, space-between, flex-start);
-    margin-top: 4em
 }
 
+//Giving space between the columns 
+//1. nav-copyright vs 2.subscribe-social
 .footer-nav,
 .footer-copyright {
     width: 60%;
@@ -76,6 +78,7 @@ export default {
     text-align: right;
 }
 
+//Styling
 .footer-nav {
     &__logo {
         width: 150px;

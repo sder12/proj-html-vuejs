@@ -90,5 +90,4 @@ export const store = reactive({
             active: false
         }
     ]
-
 });

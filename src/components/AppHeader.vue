@@ -5,16 +5,21 @@ export default {
         navLinks: Array,
     }
 }
-
 </script>
  
 <template>
+    <!-- Header -->
     <header class="header">
+
+        <!-- Logo -->
         <div class="header__logo">
             <div>
                 <img src="../assets/img/logo/avada-bakery-logo-retina-200x97.png" alt="Bakery logo">
             </div>
         </div>
+        <!-- / Logo -->
+
+        <!-- Nav Menu -->
         <div class="header__nav">
             <ul>
                 <li v-for="(link, index) in navLinks" :key="index" :class="link.active ? 'active' : ''">
@@ -24,7 +29,9 @@ export default {
                 </li>
             </ul>
         </div>
+        <!-- / Nav Menu -->
     </header>
+    <!-- /Header -->
 </template>
 
  
@@ -37,10 +44,12 @@ export default {
     padding: 2.8em 1em 0;
     @include flex(row, space-between, center);
 
+    //LOGO
     &__logo img {
         height: $header-height;
     }
 
+    //NAV
     &__nav ul {
         @include flex(row, flex-end, center);
         color: $dark-txt;

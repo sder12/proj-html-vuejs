@@ -28,12 +28,10 @@ export default {
 
     <!-- Wrapper Jumbo -->
     <div class="wrapper-jumbotron">
-      <!-- Header -->
+      <!-- Header & Banner-->
       <AppHeader :navLinks=store.navHeader />
-      <!-- /Header -->
-      <!-- Banner -->
       <AppBanner />
-      <!-- /Banner -->
+      <!-- Header & Banner-->
     </div>
     <!-- /Wrapper Jumbo -->
 
@@ -48,21 +46,27 @@ export default {
     </div>
     <!-- / Wrapper Main -->
 
-    <!-- Footer -->
+
+    <!--Wrapper Cta -->
     <div class="wrapper-cta">
       <AppCallToAction class="mt-4" />
     </div>
+    <!--/Wrapper Cta -->
 
-    <AppFooter :navMenu=store.navFooter />
+
+    <!-- Footer -->
+    <AppFooter class="my-3" :navMenu=store.navFooter />
     <!-- / Footer -->
 
   </div>
   <!-- / container -->
 </template>
 
+
 <style lang="scss">
 @use "./styles/general.scss" as *;
 
+//Background IMAGES full page
 .wrapper-jumbotron,
 .wrapper-cta {
   width: 100%;

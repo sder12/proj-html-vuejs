@@ -20,6 +20,15 @@ img {
     max-width: 100%;
 }
 
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 //LAYOUT
 .container {
     width: 100%;
@@ -41,7 +50,7 @@ img {
 
 .header {
     //DEBUG
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $dark-txt;
 }
 
 .mt-4 {

@@ -4,6 +4,7 @@
 
 <template>
   <h1>debug</h1>
+
 </template>
 
 <style lang="scss">

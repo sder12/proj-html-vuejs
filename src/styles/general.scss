@@ -1,8 +1,14 @@
+@use "@fontsource/work-sans";
+@use "@fontsource/source-serif-4";
+
 @use "./partials/variables" as *;
 
 //DEBUG
 body {
     background-color: $bg-chevron-slider;
+    // font-family: "Work Sans", sans-serif;
+    font-family: "Source Serif 4", serif;
+
 }
 
 

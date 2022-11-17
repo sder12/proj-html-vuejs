@@ -43,7 +43,10 @@ export default {
     <!-- / Wrapper Main -->
 
     <!-- Footer -->
-    <AppFooterTop class="mt-4" />
+    <div class="wrapper-footer">
+      <AppFooterTop class="mt-4" />
+    </div>
+
     <AppFooterBottom />
     <!-- / Footer -->
 
@@ -54,11 +57,19 @@ export default {
 <style lang="scss">
 @use "./styles/general.scss" as *;
 
-.wrapper-jumbotron {
+.wrapper-jumbotron,
+.wrapper-footer {
   width: 100%;
-  background-image: url("../src/assets/img/hero-header-bakery.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.wrapper-jumbotron {
+  background-image: url("../src/assets/img/hero-header-bakery.jpg");
+}
+
+.wrapper-footer {
+  background-image: url("../src/assets/img/call-to-action-bg.jpg");
 }
 </style>

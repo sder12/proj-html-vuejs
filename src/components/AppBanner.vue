@@ -28,8 +28,8 @@ export default {
 @use "../styles/partials/mixins" as*;
 
 .banner {
-    min-height: $banner-minheight;
     @include flex(column, center, flex-start);
+    padding: 8em 0;
     width: 35%;
 }
 </style>

@@ -1,58 +1,11 @@
 <script>
 export default {
     name: "AppHeader",
-    data() {
-        return {
-            navLinks: [
-                {
-                    name: "home",
-                    url: "/home",
-                    active: true
-                },
-                {
-                    name: "shop",
-                    url: "/shop",
-                    active: false
-                },
-                {
-                    name: "about",
-                    url: "/about",
-                    active: false
-                },
-                {
-                    name: "gallery",
-                    url: "/gallery",
-                    active: false
-                },
-                {
-                    name: "locations",
-                    url: "/locations",
-                    active: false
-                },
-                {
-                    name: "journal",
-                    url: "/journal",
-                    active: false
-                },
-                {
-                    name: "contact",
-                    url: "/contact",
-                    active: false
-                },
-                {
-                    name: "my account",
-                    url: "/my account",
-                    active: false
-                },
-                {
-                    name: "cart",
-                    url: "/cart",
-                    active: false
-                }
-            ]
-        }
+    props: {
+        navLinks: Array,
     }
 }
+
 </script>
  
 <template>

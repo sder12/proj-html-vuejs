@@ -1,4 +1,5 @@
 <script>
+import { store } from "./store";
 import AppHeader from "./components/AppHeader.vue";
 import AppBanner from "./components/AppBanner.vue";
 import AppMainDebug from "./components/AppMainDebug.vue";
@@ -12,6 +13,11 @@ export default {
     AppMainDebug,
     AppFooterTop,
     AppFooterBottom,
+  },
+  data() {
+    return {
+      store
+    }
   }
 }
 </script>
@@ -23,7 +29,7 @@ export default {
     <!-- Wrapper Jumbo -->
     <div class="wrapper-jumbotron">
       <!-- Header -->
-      <AppHeader />
+      <AppHeader :navLinks=store.navHeader />
       <!-- /Header -->
       <!-- Banner -->
       <AppBanner />

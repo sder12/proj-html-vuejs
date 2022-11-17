@@ -2,8 +2,13 @@
 import { store } from "./store";
 import AppHeader from "./components/AppHeader.vue";
 import AppBanner from "./components/AppBanner.vue";
+import AppProduct from "./components/AppProduct.vue";
 import AppSectionTitle from "./components/AppSectionTitle.vue";
-import AppMainDebug from "./components/AppMainDebug.vue";
+import AppGallery from "./components/AppGallery.vue";
+import AppProductAll from "./components/AppProductAll.vue";
+import AppValues from "./components/AppValues.vue";
+import AppBranches from "./components/AppBranches.vue";
+import AppSharing from "./components/AppSharing.vue";
 import AppCallToAction from "./components/AppCallToAction.vue";
 import AppFooter from "./components/AppFooter.vue";
 
@@ -11,15 +16,19 @@ export default {
   components: {
     AppHeader,
     AppBanner,
+    AppProduct,
     AppSectionTitle,
-    AppMainDebug,
+    AppGallery,
+    AppProductAll,
+    AppValues,
+    AppBranches,
+    AppSharing,
     AppCallToAction,
     AppFooter,
   },
   data() {
     return {
       store,
-
     }
   }
 }
@@ -41,14 +50,14 @@ export default {
 
     <!-- Wrapper Main -->
     <div class="wrapper">
-      <!-- DEBUG MAIN -->
-      <AppMainDebug class="mt-4" />
-      <AppMainDebug class="mt-4" />
-      <AppSectionTitle :titleSection=store.sectionsTitle[0] class="mt-4" />
-      <AppMainDebug class="mt-4" />
+      <AppProduct class="mt-4" />
+      <AppSectionTitle class="mt-4" :titleSection=store.sectionsTitle[0] />
+      <AppGallery class="mt-1" />
+      <AppProductAll class="mt-4" />
+      <AppValues class="mt-4" />
       <AppSectionTitle :titleSection=store.sectionsTitle[1] class="mt-4" />
-      <AppMainDebug class="mt-2" />
-      <!-- / DEBUG MAIN -->
+      <AppBranches class="mt-1" />
+      <AppSharing class="mt-4" />
     </div>
     <!-- / Wrapper Main -->
 

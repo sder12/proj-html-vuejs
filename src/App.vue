@@ -2,6 +2,7 @@
 import { store } from "./store";
 import AppHeader from "./components/AppHeader.vue";
 import AppBanner from "./components/AppBanner.vue";
+import AppSectionTitle from "./components/AppSectionTitle.vue";
 import AppMainDebug from "./components/AppMainDebug.vue";
 import AppCallToAction from "./components/AppCallToAction.vue";
 import AppFooter from "./components/AppFooter.vue";
@@ -10,13 +11,15 @@ export default {
   components: {
     AppHeader,
     AppBanner,
+    AppSectionTitle,
     AppMainDebug,
     AppCallToAction,
     AppFooter,
   },
   data() {
     return {
-      store
+      store,
+
     }
   }
 }
@@ -41,7 +44,10 @@ export default {
       <!-- DEBUG MAIN -->
       <AppMainDebug class="mt-4" />
       <AppMainDebug class="mt-4" />
+      <AppSectionTitle :titleSection=store.sectionsTitle[0] class="mt-4" />
       <AppMainDebug class="mt-4" />
+      <AppSectionTitle :titleSection=store.sectionsTitle[1] class="mt-4" />
+      <AppMainDebug class="mt-2" />
       <!-- / DEBUG MAIN -->
     </div>
     <!-- / Wrapper Main -->

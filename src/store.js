@@ -89,5 +89,15 @@ export const store = reactive({
             url: "/cart",
             active: false
         }
+    ],
+    sectionsTitle: [
+        {
+            title: "Baking Special Moments",
+            subtitle: "Corporate & Weddings"
+        },
+        {
+            title: "Visit our Bakeries",
+            subtitle: "Locations"
+        }
     ]
 });

@@ -17,29 +17,38 @@ export default {
 </script>
 
 <template>
+  <!-- container -->
   <div class="container">
+
+    <!-- Wrapper Jumbo -->
     <div class="wrapper-jumbotron">
       <!-- Header -->
       <AppHeader />
-
+      <!-- /Header -->
       <!-- Banner -->
       <AppBanner />
+      <!-- /Banner -->
     </div>
+    <!-- /Wrapper Jumbo -->
 
 
     <!-- Wrapper Main -->
     <div class="wrapper">
       <!-- DEBUG MAIN -->
-      <AppMainDebug />
-      <hr>
-      <AppMainDebug />
-      <AppMainDebug />
+      <AppMainDebug class="mt-4" />
+      <AppMainDebug class="mt-4" />
+      <AppMainDebug class="mt-4" />
+      <!-- / DEBUG MAIN -->
     </div>
+    <!-- / Wrapper Main -->
 
     <!-- Footer -->
-    <AppFooterTop />
+    <AppFooterTop class="mt-4" />
     <AppFooterBottom />
+    <!-- / Footer -->
+
   </div>
+  <!-- / container -->
 </template>
 
 <style lang="scss">

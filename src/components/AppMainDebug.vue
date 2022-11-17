@@ -14,6 +14,6 @@ export default {
 
 <style lang="scss" scoped>
 div {
-    background-color: lightpink;
+    background-color: rgb(255, 225, 229);
 }
 </style>

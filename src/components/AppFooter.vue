@@ -1,7 +1,11 @@
 <script>
 export default {
-    name: "AppFooter"
+    name: "AppFooter",
+    props: {
+        navMenu: Array,
+    }
 }
+
 </script>
 
 <template>
@@ -9,10 +13,17 @@ export default {
         <!-- FOOTER TOP -->
         <section class="footer-top">
             <div class="footer-nav">
+                <div class="footer-nav__logo">
+                    <img src="../assets/img/logo/avada-bakery-logo-retina-200x97.png" alt="Bakery logo">
+                </div>
 
-                <ul>
-                    <li>Shop</li>
-                    <li>About</li>
+                <ul class="footer-nav__menu">
+                    <li v-for="(link, index) in navMenu" :key="index">
+                        <a :href="link.url">
+                            {{ link.name }}
+                        </a>
+                    </li>
+
                 </ul>
 
             </div>
@@ -44,9 +55,14 @@ export default {
 @use "../styles/partials/variables" as*;
 @use "../styles/partials/mixins" as*;
 
+.footer {
+    padding: 0 2em 4em;
+}
+
 .footer-top,
 .footer-bottom {
-    @include flex(row, space-between, flex-start)
+    @include flex(row, space-between, flex-start);
+    margin-top: 4em
 }
 
 .footer-nav,
@@ -58,5 +74,20 @@ export default {
 .footer-social {
     width: 30%;
     text-align: right;
+}
+
+.footer-nav {
+    &__logo {
+        width: 150px;
+    }
+
+    &__menu {
+        @include flex(row, flex-start, flex-start);
+        margin-top: 1em;
+
+        li {
+            padding-right: 1em;
+        }
+    }
 }
 </style>

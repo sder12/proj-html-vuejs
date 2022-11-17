@@ -53,7 +53,7 @@ export default {
       <AppCallToAction class="mt-4" />
     </div>
 
-    <AppFooter />
+    <AppFooter :navMenu=store.navFooter />
     <!-- / Footer -->
 
   </div>

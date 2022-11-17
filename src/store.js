@@ -47,6 +47,48 @@ export const store = reactive({
             url: "/cart",
             active: false
         }
+    ],
+    navFooter: [
+        {
+            name: "shop",
+            url: "/shop",
+            active: false
+        },
+        {
+            name: "about",
+            url: "/about",
+            active: false
+        },
+        {
+            name: "gallery",
+            url: "/gallery",
+            active: false
+        },
+        {
+            name: "locations",
+            url: "/locations",
+            active: false
+        },
+        {
+            name: "journal",
+            url: "/journal",
+            active: false
+        },
+        {
+            name: "contact",
+            url: "/contact",
+            active: false
+        },
+        {
+            name: "orders",
+            url: "/orders",
+            active: false
+        },
+        {
+            name: "cart",
+            url: "/cart",
+            active: false
+        }
     ]
 
 });

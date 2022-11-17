@@ -12,7 +12,7 @@ export default {
     <header class="header">
         <div class="header__logo">
             <div>
-                <img src="../assets/img/logo/avada-bakery-logo-retina-200x97.png" alt="">
+                <img src="../assets/img/logo/avada-bakery-logo-retina-200x97.png" alt="Bakery logo">
             </div>
         </div>
         <div class="header__nav">

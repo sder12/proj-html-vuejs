@@ -53,4 +53,12 @@ export default {
 
 <style lang="scss">
 @use "./styles/general.scss" as *;
+
+.wrapper-jumbotron {
+  width: 100%;
+  background-image: url("../src/assets/img/hero-header-bakery.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 </style>

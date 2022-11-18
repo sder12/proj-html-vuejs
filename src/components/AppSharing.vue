@@ -5,46 +5,45 @@ export default {
 </script>
 
 <template>
-    <section class="ms_sharing container-fluid ">
+    <section class="ms_cta container-fluid g-0">
 
 
-        <div class="ms_sharing__section row ">
-            <div class="sharing__img col-lg-3 col-sm-12">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ad eos temporibus reiciendis architecto
-                nam neque animi, saepe quasi itaque, pariatur ex velit atque, maiores minus laborum consectetur officiis
-                et!
-            </div>
-            <div class="sharing__img col-lg-6 col-sm-12">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ad eos temporibus reiciendis architecto
-                nam neque animi, saepe quasi itaque, pariatur ex velit atque, maiores minus laborum consectetur officiis
-                et!
-            </div>
-            <div class="sharing__img col-lg-3 col-sm-6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ad eos temporibus reiciendis architecto
-                nam neque animi, saepe quasi itaque, pariatur ex velit atque, maiores minus laborum consectetur officiis
-                et!
+        <div class="ms_sharing row g-3 align-items-stretch">
+
+            <div class="ms_sharing__img col-3 ">
+                <img src="../assets/img/cta-sharing/social-1.jpg" alt="">
             </div>
 
-            <div class="sharing__img col-lg-3 col-sm-6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ad eos temporibus reiciendis architecto
-                nam neque animi, saepe quasi itaque, pariatur ex velit atque, maiores minus laborum consectetur officiis
-                et!
+
+            <div class="ms_sharing__text col-6 ">
+                <div class=" text-center">
+                    <span>made for sharing</span>
+                    <h4>Let's stay in touch</h4>
+                    <button class="btn ms_btn-dark">
+                        <i class="fa-brands fa-instagram"></i>
+                        Follow us
+                    </button>
+                </div>
             </div>
-            <div class="sharing__img col-lg-3 col-sm-6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ad eos temporibus reiciendis architecto
-                nam neque animi, saepe quasi itaque, pariatur ex velit atque, maiores minus laborum consectetur officiis
-                et!
+
+
+            <div class="ms_sharing__img col-3 ">
+                <img src="../assets/img/cta-sharing/social-2.jpg" alt="">
             </div>
-            <div class="sharing__img col-lg-3 col-sm-6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ad eos temporibus reiciendis architecto
-                nam neque animi, saepe quasi itaque, pariatur ex velit atque, maiores minus laborum consectetur officiis
-                et!
+
+            <div class="ms_sharing__img col-3 ">
+                <img src="../assets/img/cta-sharing/social-3.jpg" alt="">
             </div>
-            <div class="sharing__img col-lg-3 col-sm-12">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ad eos temporibus reiciendis architecto
-                nam neque animi, saepe quasi itaque, pariatur ex velit atque, maiores minus laborum consectetur officiis
-                et!
+            <div class="ms_sharing__img col-3 ">
+                <img src="../assets/img/cta-sharing/social-4.jpg" alt="">
             </div>
+            <div class="ms_sharing__img col-3 ">
+                <img src="../assets/img/cta-sharing/social-5.jpg" alt="">
+            </div>
+            <div class="ms_sharing__img col-3 ">
+                <img src="../assets/img/cta-sharing/social-6.jpg" alt="">
+            </div>
+
         </div>
 
     </section>
@@ -54,11 +53,19 @@ export default {
 @use "../styles/partials/variables" as*;
 @use "../styles/partials/mixins" as*;
 
-.ms_sharing__section {
-    background-color: lightblue;
+.ms_sharing {
+    &__text {
+        >* {
+            background-color: $bg-simple;
+            padding: 8em 0;
+        }
+    }
 
-    >* {
-        border: 1px solid black;
+    &__img {
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
     }
 }
 </style>

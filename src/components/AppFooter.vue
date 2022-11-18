@@ -3,6 +3,7 @@ export default {
     name: "AppFooter",
     props: {
         navMenu: Array,
+        socialMenu: Array,
     }
 }
 
@@ -20,9 +21,15 @@ export default {
 
                 <ul class="footer-nav__menu">
                     <li v-for="(link, index) in navMenu" :key="index">
-                        <a :href="link.url">
+                        <a :href="link.url" v-if="link.name !== 'cart'">
                             {{ link.name }}
                         </a>
+                        <a :href="link.url" v-else>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </li>
+                    <li>
+
                     </li>
                 </ul>
             </div>
@@ -47,16 +54,25 @@ export default {
             </div>
             <!-- Footer Social -->
             <div class="footer-social">
-                instagram - twitter - facebook - pinterest
+                <ul>
+                    <li v-for="(social, index) in socialMenu" :key="index">
+                        <a :href="social.url">
+                            <i :class="`fa-brands fa-${social.name}`"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
         <!-- / FOOTER BOTTOM -->
+
+
     </footer>
 </template>
 
 <style lang="scss" scoped>
 @use "../styles/partials/variables" as*;
 @use "../styles/partials/mixins" as*;
+
 
 //Flexing the two row 
 //1.row(nav-subscribe) vs 2.row(copyright-social)
@@ -91,6 +107,15 @@ export default {
         li {
             padding-right: 1em;
         }
+    }
+}
+
+.footer-social {
+    ul {
+        @include flex(row, flex-end, flex-start);
+        gap: 2em;
+
+
     }
 }
 </style>

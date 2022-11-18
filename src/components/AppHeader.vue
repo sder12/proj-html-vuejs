@@ -23,8 +23,11 @@ export default {
         <div class="header__nav">
             <ul>
                 <li v-for="(link, index) in navLinks" :key="index" :class="link.active ? 'active' : ''">
-                    <a :href="link.url">
+                    <a :href="link.url" v-if="link.name !== 'cart'">
                         {{ link.name }}
+                    </a>
+                    <a :href="link.url" v-else>
+                        <i class="fa-solid fa-cart-shopping"></i>
                     </a>
                 </li>
             </ul>

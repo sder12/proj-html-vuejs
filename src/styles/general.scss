@@ -1,7 +1,9 @@
+@use "/node_modules/@fortawesome/fontawesome-free/css/all.min.css";
 @use "@fontsource/work-sans";
 @use "@fontsource/source-serif-4";
 
 @use "./partials/variables" as *;
+
 
 // RESET
 * {
@@ -19,6 +21,7 @@ html {
     font-size: 100%;
     font-family: "Work Sans", sans-serif;
     // font-family: "Source Serif 4", serif;
+    scroll-behavior: smooth;
 }
 
 li {
@@ -39,7 +42,8 @@ a {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: $bg-container
+    background-color: $bg-container;
+    position: relative;
 }
 
 .wrapper {

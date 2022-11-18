@@ -41,8 +41,9 @@ export default {
     <!-- Wrapper Jumbo -->
     <div class="wrapper-jumbotron">
       <!-- Header & Banner-->
-      <AppHeader :navLinks=store.navHeader />
+      <AppHeader :navLinks=store.navHeader id="header" />
       <AppBanner />
+
       <!-- Header & Banner-->
     </div>
     <!-- /Wrapper Jumbo -->
@@ -70,9 +71,14 @@ export default {
 
 
     <!-- Footer -->
-    <AppFooter class="my-3" :navMenu=store.navFooter />
+    <AppFooter class="my-3" :navMenu=store.navFooter :socialMenu=store.socialNetwork />
     <!-- / Footer -->
 
+    <div class="wrapper">
+      <a href="#header" id="chevron">
+        <i class="fa-solid fa-chevron-up"></i>
+      </a>
+    </div>
   </div>
   <!-- / container -->
 </template>
@@ -80,6 +86,7 @@ export default {
 
 <style lang="scss">
 @use "./styles/general.scss" as *;
+@use "./styles/partials/variables" as *;
 
 //Background IMAGES full page
 .wrapper-jumbotron,
@@ -96,5 +103,16 @@ export default {
 
 .wrapper-cta {
   background-image: url("../src/assets/img/call-to-action-bg.jpg");
+}
+
+//Chevron go to top page
+#chevron {
+  position: fixed;
+  bottom: 0em;
+  right: .3em;
+  padding: .5em 1em;
+  background-color: $bg-chevron-footer;
+  color: white;
+  border-radius: 5px 5px 0px 0px;
 }
 </style>

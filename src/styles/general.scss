@@ -59,3 +59,23 @@ button {
 .ms_mt-4 {
     margin-top: 4em;
 }
+
+//My BTN
+.ms_btn-light {
+    background-color: white;
+    color: $dark-txt;
+}
+
+.ms_btn-dark {
+    background-color: $dark-txt;
+    color: white;
+}
+
+//Typography
+.ms_txt-dark {
+    color: $dark-txt;
+}
+
+.ms_txt-light {
+    color: $lighten-txt
+}

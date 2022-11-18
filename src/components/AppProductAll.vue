@@ -9,90 +9,78 @@ export default {
         <div class="row">
 
             <!-- Text -->
-            <div class="ms_product-text col-lg-2 col-md-12">
+            <div class="ms_product-text col-12 col-lg-4 text-center align-self-center">
                 <h3>Find a freshly backed product perfect for you </h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
-                <button class="btn btn-dark">Shop All Products</button>
+                <button class="btn ms_btn-dark">Shop All Products</button>
             </div>
             <!-- Slider -->
-            <div class="ms_product-slider col-lg-10 col-md-12">
+            <div class="ms_product-slider col-lg-8 col-12 g-0 position-relative">
                 <!-- Images -->
-                <div class="row row-cols-lg-4 ">
+                <div class="row row-cols-4 g-3">
                     <!-- First img -->
-                    <div class="ms_slider col-md-3">
+                    <div class="ms_slider col-3">
                         <div class="ms_slider__img">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, ad cum similique nisi
-                            ipsam
-                            nostrum
-                            expedita praesentium. Voluptates, blanditiis repellat? Hic minima facilis asperiores
-                            consequatur
-                            iure
-                            nulla blanditiis officiis! Aperiam.
+                            <img src="../assets/img/slider/choco-chip-cookies-600x765.jpg" alt="choco cips cookies">
+
                         </div>
-                        <div class="ms_slider__text">
+                        <div class="ms_slider__text text-center">
                             <h4>Choco Chip Cookies</h4>
                             <span>$19.00 -$39.00</span>
                         </div>
                     </div>
                     <!-- Second -->
-                    <div class="ms_slider col-md-3">
+                    <div class="ms_slider col-3">
                         <div class="ms_slider__img">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, ad cum similique nisi
-                            ipsam
-                            nostrum
-                            expedita praesentium. Voluptates, blanditiis repellat? Hic minima facilis asperiores
-                            consequatur
-                            iure
-                            nulla blanditiis officiis! Aperiam.
+                            <img src="../assets/img/slider/strawberry-jam-cookies-600x765.jpg"
+                                alt="strawberry jam cookies">
+
                         </div>
-                        <div class="ms_slider__text">
+                        <div class="ms_slider__text  text-center">
                             <h4>Choco Chip Cookies</h4>
                             <span>$19.00 -$39.00</span>
                         </div>
                     </div>
                     <!-- Third-->
-                    <div class="ms_slider col-md-3">
+                    <div class="ms_slider col-3">
                         <div class="ms_slider__img">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, ad cum similique nisi
-                            ipsam
-                            nostrum
-                            expedita praesentium. Voluptates, blanditiis repellat? Hic minima facilis asperiores
-                            consequatur
-                            iure
-                            nulla blanditiis officiis! Aperiam.
+                            <img src="../assets/img/slider/strawberry-donut-600x765.jpg" alt="perfect macarons">
+
                         </div>
-                        <div class="ms_slider__text">
+                        <div class="ms_slider__text  text-center">
                             <h4>Choco Chip Cookies</h4>
                             <span>$19.00 -$39.00</span>
                         </div>
                     </div>
                     <!-- Last img -->
-                    <div class="ms_slider col-md-3">
+                    <div class="ms_slider col-3">
                         <div class="ms_slider__img">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, ad cum similique nisi
-                            ipsam
-                            nostrum
-                            expedita praesentium. Voluptates, blanditiis repellat? Hic minima facilis asperiores
-                            consequatur
-                            iure
-                            nulla blanditiis officiis! Aperiam.
+                            <img src="../assets/img/slider/perfect-macarons-600x765.jpg" alt="perfect macarons">
+
                         </div>
-                        <div class="ms_slider__text">
+                        <div class="ms_slider__text  text-center">
                             <h4>Choco Chip Cookies</h4>
                             <span>$19.00 -$39.00</span>
                         </div>
                     </div>
                 </div>
-                <!-- Chevron -->
-                <!-- <div class="product__slider-cta">
-                <div class="slider-cta chevron-left">
-                    <i class="fa-solid fa-chevron-left"></i>
+
+
+
+                <!-- CTA chevron -->
+
+                <div class="ms_cta-slider d-flex justify-content-between">
+                    <div class="ms_cta-slider-left">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <div class="ms_cta-slider-right">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
                 </div>
-                <div class="slider-cta chevron-left">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </div>
-            </div> -->
+
+
             </div>
+
 
 
         </div>
@@ -103,15 +91,7 @@ export default {
 @use "../styles/partials/variables" as*;
 @use "../styles/partials/mixins" as*;
 
-.ms_product {
-
-    >* {
-        background-color: rgb(255, 225, 229);
-    }
-
-    .ms_slider {
-        border: 1px solid black;
-        background-color: rgba(104, 152, 255, 0.308);
-    }
+.ms_cta-slider {
+    top: 30%;
 }
 </style>

@@ -71,6 +71,11 @@ button {
     color: white;
 }
 
+.ms_btn-light:hover,
+.ms_btn-dark:hover {
+    background-color: $bg-chevron-slider;
+}
+
 //Typography
 .ms_txt-dark {
     color: $dark-txt;
@@ -78,4 +83,17 @@ button {
 
 .ms_txt-light {
     color: $lighten-txt
+}
+
+//Chevron slider
+.ms_cta-slider {
+    width: 100%;
+    cursor: pointer;
+    position: absolute;
+
+    >* {
+        background-color: $bg-chevron-slider;
+        padding: 1em .5em;
+        color: white;
+    }
 }

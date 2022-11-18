@@ -16,7 +16,7 @@ export default {
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Officia enim ea, odio facilis suscipit incidunt
             </p>
-            <button class="btn btn-light">
+            <button class="btn ms_btn-light">
                 Explore our products
             </button>
         </div>

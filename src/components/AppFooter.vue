@@ -12,13 +12,13 @@ export default {
 <template>
     <footer class="footer px-2">
         <!-- FOOTER TOP -->
-        <section class="footer-top">
+        <section class="footer-top row">
+
             <!-- Footer Nav -->
-            <div class="footer-nav">
+            <div class="footer-nav col-8">
                 <div class="footer-nav__logo">
                     <img src="../assets/img/logo/avada-bakery-logo-retina-200x97.png" alt="Bakery logo">
                 </div>
-
                 <ul class="footer-nav__menu">
                     <li v-for="(link, index) in navFooter" :key="index" v-show="link.footerShow">
                         <a :href="link.url" v-if="link.name !== 'cart'">
@@ -29,13 +29,11 @@ export default {
                             <span> 0 </span>
                         </a>
                     </li>
-                    <li>
-
-                    </li>
                 </ul>
             </div>
+
             <!-- Footer Subscribe -->
-            <div class="footer-subscribe">
+            <div class="footer-subscribe col-4">
                 <h4>Subscribe to our Newsletter</h4>
                 <div class="subscribe-email">
                     <label for="subscribe" class="sr-only">Enter email address</label>
@@ -43,18 +41,15 @@ export default {
                     <button class="btn btn-dark"> Subscribe </button>
                 </div>
             </div>
-        </section>
-        <!-- / FOOTER TOP -->
 
-        <!-- FOOTER BOTTOM -->
-        <section class="footer-bottom mt-3">
             <!-- Footer Copyright -->
-            <div class="footer-copyright">
+            <div class="footer-copyright col-8">
                 <span> &copy; Copyright 2012 - 2020 | Avada Theme by ThemeFusion | All Rights Reserved | Powered by
                     Wordpress</span>
             </div>
+
             <!-- Footer Social -->
-            <div class="footer-social">
+            <div class="footer-social col-4">
                 <ul>
                     <li v-for="(social, index) in socialMenu" :key="index">
                         <a :href="social.url">
@@ -64,7 +59,6 @@ export default {
                 </ul>
             </div>
         </section>
-        <!-- / FOOTER BOTTOM -->
 
 
     </footer>
@@ -75,25 +69,6 @@ export default {
 @use "../styles/partials/mixins" as*;
 
 
-//Flexing the two row 
-//1.row(nav-subscribe) vs 2.row(copyright-social)
-.footer-top,
-.footer-bottom {
-    @include flex(row, space-between, flex-start);
-}
-
-//Giving space between the columns 
-//1. nav-copyright vs 2.subscribe-social
-.footer-nav,
-.footer-copyright {
-    width: 60%;
-}
-
-.footer-subscribe,
-.footer-social {
-    width: 30%;
-    text-align: right;
-}
 
 //Styling
 .footer-nav {
@@ -103,7 +78,7 @@ export default {
 
     &__menu {
         @include flex(row, flex-start, flex-start);
-        margin-top: 1em;
+        margin: 1em 0;
 
         li {
             padding-right: 1em;
@@ -111,12 +86,14 @@ export default {
     }
 }
 
+.footer-subscribe {
+    text-align: right;
+}
+
 .footer-social {
     ul {
         @include flex(row, flex-end, flex-start);
         gap: 2em;
-
-
     }
 }
 </style>

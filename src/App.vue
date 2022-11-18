@@ -41,7 +41,7 @@ export default {
     <!-- Wrapper Jumbo -->
     <div class="wrapper-jumbotron">
       <!-- Header & Banner-->
-      <AppHeader :navLinks=store.navHeader id="header" />
+      <AppHeader :navHeader=store.navMenu id="header" />
       <AppBanner />
 
       <!-- Header & Banner-->
@@ -71,7 +71,7 @@ export default {
 
 
     <!-- Footer -->
-    <AppFooter class="my-3" :navMenu=store.navFooter :socialMenu=store.socialNetwork />
+    <AppFooter class="my-3" :navFooter=store.navMenu :socialMenu=store.socialNetwork />
     <!-- / Footer -->
 
     <div class="wrapper">

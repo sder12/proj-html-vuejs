@@ -2,7 +2,7 @@
 export default {
     name: "AppHeader",
     props: {
-        navLinks: Array,
+        navHeader: Array,
     }
 }
 </script>
@@ -22,7 +22,8 @@ export default {
         <!-- Nav Menu -->
         <div class="header__nav">
             <ul>
-                <li v-for="(link, index) in navLinks" :key="index" :class="link.active ? 'active' : ''">
+                <li v-for="(link, index) in navHeader" :key="index" :class="link.active ? 'active' : ''"
+                    v-show="link.headerShow">
                     <a :href="link.url" v-if="link.name !== 'cart'">
                         {{ link.name }}
                     </a>

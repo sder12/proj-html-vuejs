@@ -2,7 +2,7 @@
 export default {
     name: "AppFooter",
     props: {
-        navMenu: Array,
+        navFooter: Array,
         socialMenu: Array,
     }
 }
@@ -20,12 +20,13 @@ export default {
                 </div>
 
                 <ul class="footer-nav__menu">
-                    <li v-for="(link, index) in navMenu" :key="index">
+                    <li v-for="(link, index) in navFooter" :key="index" v-show="link.footerShow">
                         <a :href="link.url" v-if="link.name !== 'cart'">
                             {{ link.name }}
                         </a>
                         <a :href="link.url" v-else>
                             <i class="fa-solid fa-cart-shopping"></i>
+                            <span> 0 </span>
                         </a>
                     </li>
                     <li>

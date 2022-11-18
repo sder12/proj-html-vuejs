@@ -6,10 +6,10 @@ export default {
 
 <template>
     <!-- Wrapper = main -->
-    <div class="wrapper">
+    <div class="ms_wrapper container-fluid g-0">
 
         <!-- Banner -->
-        <div class="banner">
+        <div class="ms_banner col-lg-4 col-md-6">
             <span>fresh & tasty bakery every day</span>
             <h1>The Perfect Fresh Bread</h1>
             <p>
@@ -29,10 +29,9 @@ export default {
 @use "../styles/partials/variables" as*;
 @use "../styles/partials/mixins" as*;
 
-.banner {
+.ms_banner {
     @include flex(column, center, flex-start);
     gap: 1em;
     padding: 8em 0;
-    width: 35%;
 }
 </style>

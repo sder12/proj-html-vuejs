@@ -10,16 +10,16 @@ export default {
 </script>
 
 <template>
-    <footer class="footer px-2">
+    <footer class="footer container-fluid">
         <!-- FOOTER TOP -->
-        <section class="footer-top row">
+        <section class="ms_footer-top row">
 
             <!-- Footer Nav -->
-            <div class="footer-nav col-8">
-                <div class="footer-nav__logo">
+            <div class="ms_footer-nav col-lg-8 col-md-12">
+                <div class="ms_footer-nav__logo">
                     <img src="../assets/img/logo/avada-bakery-logo-retina-200x97.png" alt="Bakery logo">
                 </div>
-                <ul class="footer-nav__menu">
+                <ul class="ms_footer-nav__menu">
                     <li v-for="(link, index) in navFooter" :key="index" v-show="link.footerShow">
                         <a :href="link.url" v-if="link.name !== 'cart'">
                             {{ link.name }}
@@ -33,9 +33,9 @@ export default {
             </div>
 
             <!-- Footer Subscribe -->
-            <div class="footer-subscribe col-4">
+            <div class="ms_footer-subscribe col-lg-4 col-md-12 text-lg-end text-md-start">
                 <h4>Subscribe to our Newsletter</h4>
-                <div class="subscribe-email">
+                <div class="ms_subscribe-email">
                     <label for="subscribe" class="sr-only">Enter email address</label>
                     <input type="email" id="subscripe" placeholder="Enter email address*">
                     <button class="btn btn-dark"> Subscribe </button>
@@ -43,14 +43,14 @@ export default {
             </div>
 
             <!-- Footer Copyright -->
-            <div class="footer-copyright col-8">
+            <div class="ms_footer-copyright col-lg-8 col-md-12">
                 <span> &copy; Copyright 2012 - 2020 | Avada Theme by ThemeFusion | All Rights Reserved | Powered by
                     Wordpress</span>
             </div>
 
             <!-- Footer Social -->
-            <div class="footer-social col-4">
-                <ul>
+            <div class="ms_footer-social col-lg-4 col-md-12 ">
+                <ul class="d-flex gap-3  justify-content-lg-end justify-content-md-start">
                     <li v-for="(social, index) in socialMenu" :key="index">
                         <a :href="social.url">
                             <i :class="`fa-brands fa-${social.name}`"></i>
@@ -71,7 +71,7 @@ export default {
 
 
 //Styling
-.footer-nav {
+.ms_footer-nav {
     &__logo {
         width: 150px;
     }
@@ -83,17 +83,6 @@ export default {
         li {
             padding-right: 1em;
         }
-    }
-}
-
-.footer-subscribe {
-    text-align: right;
-}
-
-.footer-social {
-    ul {
-        @include flex(row, flex-end, flex-start);
-        gap: 2em;
     }
 }
 </style>

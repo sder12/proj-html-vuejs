@@ -4,14 +4,10 @@
 
 @use "./partials/variables" as *;
 
+@import "node_modules/bootstrap/scss/bootstrap";
+
 
 // RESET
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 img {
     max-width: 100%;
 }
@@ -42,7 +38,7 @@ button {
 }
 
 //LAYOUT
-.container {
+.ms_container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -50,99 +46,16 @@ button {
     position: relative;
 }
 
-.wrapper {
+.ms_wrapper {
     width: 90%;
     margin: 0 auto;
 }
 
 //MARGIN-PADDING
-.mt-1 {
+.ms_mt-1 {
     margin-top: 1em;
 }
 
-.mt-2 {
-    margin-top: 2em;
-}
-
-.mt-3 {
-    margin-top: 3em;
-}
-
-.mt-4 {
+.ms_mt-4 {
     margin-top: 4em;
-}
-
-.my-3 {
-    margin: 3em 0;
-}
-
-.px-2 {
-    padding: 0 2em;
-}
-
-//ROW Col
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.col-1 {
-    max-width: calc(100% / 12 * 1);
-    flex-basis: calc(100% / 12 * 1);
-}
-
-.col-2 {
-    max-width: calc(100% / 12 * 2);
-    flex-basis: calc(100% / 12 * 2);
-}
-
-.col-3 {
-    max-width: calc(100% / 12 * 3);
-    flex-basis: calc(100% / 12 * 3);
-}
-
-.col-4 {
-    max-width: calc(100% / 12 * 4);
-    flex-basis: calc(100% / 12 * 4);
-}
-
-.col-5 {
-    max-width: calc(100% / 12 * 5);
-    flex-basis: calc(100% / 12 * 5);
-}
-
-.col-6 {
-    max-width: calc(100% / 12 * 6);
-    flex-basis: calc(100% / 12 * 6);
-}
-
-.col-7 {
-    max-width: calc(100% / 12 * 7);
-    flex-basis: calc(100% / 12 * 7);
-}
-
-.col-8 {
-    max-width: calc(100% / 12 * 8);
-    flex-basis: calc(100% / 12 * 8);
-}
-
-.col-9 {
-    max-width: calc(100% / 12 * 9);
-    flex-basis: calc(100% / 12 * 9);
-}
-
-.col-10 {
-    max-width: calc(100% / 12 * 10);
-    flex-basis: calc(100% / 12 * 10);
-}
-
-.col-xs-11 {
-    max-width: calc(100% / 12 * 11);
-    flex-basis: calc(100% / 12 * 11);
-}
-
-.col-12 {
-    max-width: calc(100% / 12 * 12);
-    flex-basis: calc(100% / 12 * 12);
 }

@@ -9,31 +9,33 @@ export default {
  
 <template>
     <!-- Header -->
-    <header class="header">
+    <header class="ms_header container-fluid pt-2">
+        <div class="row align-items-center">
 
-        <!-- Logo -->
-        <div class="header__logo">
-            <div>
-                <img src="../assets/img/logo/avada-bakery-logo-retina-200x97.png" alt="Bakery logo">
+            <!-- Logo -->
+            <div class="ms_header__logo col-lg-4 col-md-12">
+                <div class="text-lg-start text-md-center">
+                    <img src="../assets/img/logo/avada-bakery-logo-retina-200x97.png" alt="Bakery logo">
+                </div>
             </div>
-        </div>
-        <!-- / Logo -->
+            <!-- / Logo -->
 
-        <!-- Nav Menu -->
-        <div class="header__nav">
-            <ul>
-                <li v-for="(link, index) in navHeader" :key="index" :class="link.active ? 'active' : ''"
-                    v-show="link.headerShow">
-                    <a :href="link.url" v-if="link.name !== 'cart'">
-                        {{ link.name }}
-                    </a>
-                    <a :href="link.url" v-else>
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </a>
-                </li>
-            </ul>
+            <!-- Nav Menu -->
+            <div class="ms_header__nav col-lg-8 col-md-12 ">
+                <ul class="d-flex justify-content-lg-end justify-content-md-center align-items-center mb-0">
+                    <li v-for="(link, index) in navHeader" :key="index" :class="link.active ? 'active' : ''"
+                        v-show="link.headerShow">
+                        <a :href="link.url" v-if="link.name !== 'cart'">
+                            {{ link.name }}
+                        </a>
+                        <a :href="link.url" v-else>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- / Nav Menu -->
         </div>
-        <!-- / Nav Menu -->
     </header>
     <!-- /Header -->
 </template>
@@ -43,10 +45,9 @@ export default {
 @use "../styles/partials/variables" as*;
 @use "../styles/partials/mixins" as*;
 
-.header {
+.ms_header {
     height: $header-height;
-    padding: 2.8em 1em 0;
-    @include flex(row, space-between, center);
+    // padding: 2.8em 1em 0;
 
     //LOGO
     &__logo img {
@@ -55,7 +56,6 @@ export default {
 
     //NAV
     &__nav ul {
-        @include flex(row, flex-end, center);
         color: $dark-txt;
 
         li {

@@ -5,18 +5,18 @@ export default {
 </script>
 
 <template>
-    <div class="branches">
-        <div class="row">
+    <section class="ms_branches container-fluid g-0">
+        <div class="row g-0">
             <!-- New York -->
-            <div class="col-6 branch">
-                <div class="branch__img">
+            <div class="ms_branch col-lg-6 ">
+                <div class="ms_branch__img">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Non doloribus placeat quia ullam dicta
                     voluptate
                     tenetur laboriosam maxime quis fugit, atque inventore, earum ipsum corporis sequi magnam culpa.
                     Doloremque,
                     quod.
                 </div>
-                <div class="branch__txt">
+                <div class="ms_branch__txt">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Non doloribus placeat quia ullam dicta
                     voluptate
                     tenetur laboriosam maxime quis fugit, atque inventore, earum ipsum corporis sequi magnam culpa.
@@ -26,15 +26,15 @@ export default {
 
             </div>
             <!-- London -->
-            <div class="col-6 branch">
-                <div class="branch__img">
+            <div class="ms_branch col-lg-6 ">
+                <div class="ms_branch__img">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Non doloribus placeat quia ullam dicta
                     voluptate
                     tenetur laboriosam maxime quis fugit, atque inventore, earum ipsum corporis sequi magnam culpa.
                     Doloremque,
                     quod.
                 </div>
-                <div class="branch__txt">
+                <div class="ms_branch__txt">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Non doloribus placeat quia ullam dicta
                     voluptate
                     tenetur laboriosam maxime quis fugit, atque inventore, earum ipsum corporis sequi magnam culpa.
@@ -43,14 +43,14 @@ export default {
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>
 @use "../styles/partials/variables" as*;
 @use "../styles/partials/mixins" as*;
 
-.branch {
+.ms_branch {
     //DEBUG
     border: 1px solid blue;
 

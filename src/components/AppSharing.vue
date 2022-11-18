@@ -5,56 +5,56 @@ export default {
 </script>
 
 <template>
-    <div class="sharing">
+    <section class="ms_sharing container-fluid ">
 
 
-        <div class="row sharing__section">
-            <div class="col-3 sharing__img">
+        <div class="ms_sharing__section row ">
+            <div class="sharing__img col-lg-3 col-sm-12">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ad eos temporibus reiciendis architecto
                 nam neque animi, saepe quasi itaque, pariatur ex velit atque, maiores minus laborum consectetur officiis
                 et!
             </div>
-            <div class="col-6 sharing__text">
+            <div class="sharing__img col-lg-6 col-sm-12">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ad eos temporibus reiciendis architecto
                 nam neque animi, saepe quasi itaque, pariatur ex velit atque, maiores minus laborum consectetur officiis
                 et!
             </div>
-            <div class="col-3 sharing__img">
+            <div class="sharing__img col-lg-3 col-sm-6">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ad eos temporibus reiciendis architecto
                 nam neque animi, saepe quasi itaque, pariatur ex velit atque, maiores minus laborum consectetur officiis
                 et!
             </div>
 
-            <div class="col-3 sharing__img">
+            <div class="sharing__img col-lg-3 col-sm-6">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ad eos temporibus reiciendis architecto
                 nam neque animi, saepe quasi itaque, pariatur ex velit atque, maiores minus laborum consectetur officiis
                 et!
             </div>
-            <div class="col-3 sharing__img">
+            <div class="sharing__img col-lg-3 col-sm-6">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ad eos temporibus reiciendis architecto
                 nam neque animi, saepe quasi itaque, pariatur ex velit atque, maiores minus laborum consectetur officiis
                 et!
             </div>
-            <div class="col-3 sharing__img">
+            <div class="sharing__img col-lg-3 col-sm-6">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ad eos temporibus reiciendis architecto
                 nam neque animi, saepe quasi itaque, pariatur ex velit atque, maiores minus laborum consectetur officiis
                 et!
             </div>
-            <div class="col-3 sharing__img">
+            <div class="sharing__img col-lg-3 col-sm-12">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ad eos temporibus reiciendis architecto
                 nam neque animi, saepe quasi itaque, pariatur ex velit atque, maiores minus laborum consectetur officiis
                 et!
             </div>
         </div>
 
-    </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>
 @use "../styles/partials/variables" as*;
 @use "../styles/partials/mixins" as*;
 
-.sharing__section {
+.ms_sharing__section {
     background-color: lightblue;
 
     >* {

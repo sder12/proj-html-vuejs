@@ -5,33 +5,20 @@ export default {
 </script>
 
 <template>
-    <div class="gallery">
-        <div class="row">
-            <div class="col-6 gallery__img">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non doloribus placeat quia ullam dicta
-                voluptate
-                tenetur laboriosam maxime quis fugit, atque inventore, earum ipsum corporis sequi magnam culpa.
-                Doloremque,
-                quod.
+    <section class="ms_gallery container-fluid g-0">
+        <div class="row g-3">
+            <div class="col-lg-6">
+                <img src="../assets/img/corporate-bg.jpg" alt="">
             </div>
-            <div class="col-6 gallery__img">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non doloribus placeat quia ullam dicta
-                voluptate
-                tenetur laboriosam maxime quis fugit, atque inventore, earum ipsum corporis sequi magnam culpa.
-                Doloremque,
-                quod.
+            <div class="col-lg-6">
+                <img src="../assets/img/wedding-bg.jpg" alt="">
             </div>
         </div>
-    </div>
+    </section>
 
 </template>
 
 <style lang="scss" scoped>
 @use "../styles/partials/variables" as*;
 @use "../styles/partials/mixins" as*;
-
-.gallery__img {
-    background-color: rgb(157, 244, 255);
-    border: 1px solid white;
-}
 </style>

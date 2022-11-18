@@ -9,29 +9,25 @@ export default {
 
 
 <template>
-    <section class="title-section">
-        <span class="section-subtitle">
+    <section class="ms_title-section text-center">
+        <span class="ms-section-subtitle text-uppercase">
             {{ titleSection.subtitle }}
         </span>
-        <h3 class="section-title">
+        <h3 class="ms_section-title">
             {{ titleSection.title }}
         </h3>
     </section>
 </template>
 
+
 <style lang="scss" scoped>
 @use "../styles/partials/variables" as*;
 
-.title-section {
-    text-align: center;
+.ms_section-subtitle {
+    color: $light-txt;
+}
 
-    .section-subtitle {
-        color: $light-txt;
-        text-transform: uppercase;
-    }
-
-    .section-title {
-        color: $dark-txt;
-    }
+.ms_section-title {
+    color: $dark-txt;
 }
 </style>

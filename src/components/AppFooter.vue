@@ -35,10 +35,12 @@ export default {
             <!-- Footer Subscribe -->
             <div class="ms_footer-subscribe col-lg-4 col-md-12 text-lg-end text-md-start">
                 <h4>Subscribe to our Newsletter</h4>
-                <div class="ms_subscribe-email">
-                    <label for="subscribe" class="sr-only">Enter email address</label>
-                    <input type="email" id="subscripe" placeholder="Enter email address*">
-                    <button class="btn btn-dark"> Subscribe </button>
+                <div class="ms_subscribe-email d-flex gap-2">
+                    <div class="input-group">
+                        <label for="subscribe" class="sr-only">Enter email address</label>
+                        <input type="email" class="form-control rounded" placeholder="Enter email address">
+                    </div>
+                    <button class="btn ms_btn-dark"> Subscribe </button>
                 </div>
             </div>
 

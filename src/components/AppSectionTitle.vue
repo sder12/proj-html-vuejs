@@ -10,12 +10,12 @@ export default {
 
 <template>
     <section class="ms_title-section text-center">
-        <span class="ms-section-subtitle text-uppercase">
+        <span class="ms-section-subtitle ms_little-caption">
             {{ titleSection.subtitle }}
         </span>
-        <h3 class="ms_section-title">
+        <h4 class="ms_section-title">
             {{ titleSection.title }}
-        </h3>
+        </h4>
     </section>
 </template>
 

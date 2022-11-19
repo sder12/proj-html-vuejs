@@ -10,7 +10,7 @@ export default {
 
         <!-- Banner -->
         <div class="ms_banner col-lg-4 col-md-6">
-            <span>fresh & tasty bakery every day</span>
+            <span class="ms_little-caption">fresh & tasty bakery every day</span>
             <h1>The Perfect Fresh Bread</h1>
             <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.

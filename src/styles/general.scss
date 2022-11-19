@@ -20,6 +20,7 @@ html {
 
 body {
     font-family: "Work Sans", sans-serif;
+    color: $light-txt;
     // font-family: "Source Serif 4", serif;
 }
 
@@ -30,6 +31,10 @@ li {
 a {
     text-decoration: none;
     color: inherit;
+
+    &:hover {
+        color: inherit;
+    }
 }
 
 button {
@@ -65,7 +70,7 @@ button {
 
 //My BTN
 .ms_btn-light {
-    background-color: white;
+    background-color: $lighten-txt;
     color: $dark-txt;
 }
 
@@ -77,17 +82,65 @@ button {
 .ms_btn-light:hover,
 .ms_btn-dark:hover {
     background-color: $bg-chevron-slider;
+}
+
+.ms_btn-dark:hover {
     color: $dark-txt;
 }
 
-//Typography
-.ms_txt-dark {
-    color: $dark-txt;
-}
-
-.ms_txt-light {
+.ms_btn-light:hover {
     color: $lighten-txt
 }
+
+
+//Typography
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Source Serif 4", serif;
+    font-weight: 800;
+    color: $dark-txt;
+}
+
+h1,
+h3,
+h4,
+h5 {
+    color: $dark-txt;
+}
+
+h2 {
+    color: $lighten-txt
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+.ms_little-caption {
+    text-transform: uppercase;
+    font-size: .7rem;
+}
+
+
+.ms_btn-light,
+.ms_btn-dark {
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+
+.ms-values-title {
+    font-size: 2.4rem;
+}
+
+.ms_values-numbers {
+    font-size: 5rem;
+    font-weight: 100;
+}
+
 
 //Chevron slider
 .ms_cta-slider {

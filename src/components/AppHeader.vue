@@ -9,7 +9,7 @@ export default {
  
 <template>
     <!-- Header -->
-    <header class="ms_header container-fluid pt-2">
+    <header class="ms_header container-fluid pt-3">
         <div class="row align-items-center">
 
             <!-- Logo -->
@@ -22,7 +22,7 @@ export default {
 
             <!-- Nav Menu -->
             <div class="ms_header__nav col-lg-8 col-md-12 ">
-                <ul class="d-flex justify-content-lg-end justify-content-md-center align-items-center mb-0">
+                <ul class="d-flex justify-content-lg-end justify-content-md-center align-items-center mb-0 ">
                     <li v-for="(link, index) in navHeader" :key="index" :class="link.active ? 'active' : ''"
                         v-show="link.headerShow">
                         <a :href="link.url" v-if="link.name !== 'cart'">
@@ -57,9 +57,16 @@ export default {
     //NAV
     &__nav ul {
         color: $dark-txt;
+        text-transform: uppercase;
+        font-size: .8rem;
+        font-weight: 500;
 
         li {
-            margin-right: 1em
+            margin-right: 1.4em;
+
+            &:hover {
+                font-weight: 600;
+            }
         }
 
         .active {

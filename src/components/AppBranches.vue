@@ -17,14 +17,14 @@ export default {
                 <div class="ms_branch__ny py-3">
                     <div class="row text-center">
                         <div class="col-12 ">
-                            <h5>New York</h5>
+                            <h4>New York</h4>
                         </div>
                         <div class="col-4">
-                            <h6>call us</h6>
+                            <h6 class="ms_little-caption">call us</h6>
                             <span>1.800.345.333</span>
                         </div>
                         <div class="col-4">
-                            <h6>open all week</h6>
+                            <h6 class="ms_little-caption">open all week</h6>
                             <span>9:00 AM - 6:00 PM</span>
                         </div>
                         <div class="col-4">
@@ -44,14 +44,14 @@ export default {
                 <div class="ms_branch__london py-3">
                     <div class="row text-center">
                         <div class="col-12 ">
-                            <h5>London</h5>
+                            <h4>London</h4>
                         </div>
                         <div class="col-4">
-                            <h6>call us</h6>
+                            <h6 class="ms_little-caption">call us</h6>
                             <span>1.800.345.333</span>
                         </div>
                         <div class="col-4">
-                            <h6>open all week</h6>
+                            <h6 class="ms_little-caption">open all week</h6>
                             <span>9:00 AM - 6:00 PM</span>
                         </div>
                         <div class="col-4">

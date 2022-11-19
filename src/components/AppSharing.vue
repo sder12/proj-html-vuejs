@@ -17,7 +17,7 @@ export default {
 
             <div class="ms_sharing__text col-6 ">
                 <div class=" text-center">
-                    <span>made for sharing</span>
+                    <span class="ms_little-caption">made for sharing</span>
                     <h4>Let's stay in touch</h4>
                     <button class="btn ms_btn-dark">
                         <i class="fa-brands fa-instagram"></i>

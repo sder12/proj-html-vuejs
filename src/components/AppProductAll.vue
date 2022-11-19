@@ -10,7 +10,7 @@ export default {
 
             <!-- Text -->
             <div class="ms_product-text col-12 col-lg-4 text-center align-self-center">
-                <h3>Find a freshly backed product perfect for you </h3>
+                <h4>Find a freshly backed product perfect for you </h4>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
                 <button class="btn ms_btn-dark">Shop All Products</button>
             </div>
@@ -25,7 +25,7 @@ export default {
 
                         </div>
                         <div class="ms_slider__text text-center">
-                            <h4>Choco Chip Cookies</h4>
+                            <h5>Choco Chip Cookies</h5>
                             <span>$19.00 -$39.00</span>
                         </div>
                     </div>
@@ -37,7 +37,7 @@ export default {
 
                         </div>
                         <div class="ms_slider__text  text-center">
-                            <h4>Choco Chip Cookies</h4>
+                            <h5>Choco Chip Cookies</h5>
                             <span>$19.00 -$39.00</span>
                         </div>
                     </div>
@@ -48,7 +48,7 @@ export default {
 
                         </div>
                         <div class="ms_slider__text  text-center">
-                            <h4>Choco Chip Cookies</h4>
+                            <h5>Choco Chip Cookies</h5>
                             <span>$19.00 -$39.00</span>
                         </div>
                     </div>
@@ -59,7 +59,7 @@ export default {
 
                         </div>
                         <div class="ms_slider__text  text-center">
-                            <h4>Choco Chip Cookies</h4>
+                            <h5>Choco Chip Cookies</h5>
                             <span>$19.00 -$39.00</span>
                         </div>
                     </div>
@@ -93,5 +93,9 @@ export default {
 
 .ms_cta-slider {
     top: 30%;
+}
+
+.ms_slider__text {
+    color: $dark-txt;
 }
 </style>

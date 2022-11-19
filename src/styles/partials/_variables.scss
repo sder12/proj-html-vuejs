@@ -1,7 +1,8 @@
 //COLORS
 //txt
 $lighten-txt: white;
-$light-txt: #A49CA9;
+// $light-txt: #A49CA9;
+$light-txt: darken(#A49CA9, 30%);
 $dark-txt: #55328B;
 $diverse-txt: #75C288;
 $diverse-icon: #33475B;

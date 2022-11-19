@@ -10,12 +10,12 @@ export default {
 
             <!-- Text -->
             <div class="ms_product-text col-4 pe-5">
-                <span> our products</span>
-                <h3>
+                <span class="ms_little-caption"> our products</span>
+                <h4>
                     All our delectable pastries are backed fresh in our
                     Kitchen very morning, and are made with all-natural,
                     all organic ingredients.
-                </h3>
+                </h4>
                 <button class="btn ms_btn-dark">Start shopping</button>
             </div>
             <!-- Slider -->

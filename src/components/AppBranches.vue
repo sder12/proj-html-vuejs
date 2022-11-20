@@ -1,6 +1,26 @@
 <script>
+import AppBranchesCard from './AppBranchesCard.vue';
 export default {
-    name: "AppBranches"
+    name: "AppBranches",
+    components: {
+        AppBranchesCard
+    },
+    data() {
+        return {
+            london: {
+                place: "London",
+                phone: "1.800.345.333",
+                timetable: "9:00 AM - 6:00 PM",
+                image: "../assets/img/london-bk-800x530.jpg"
+            },
+            newYork: {
+                place: "New York",
+                phone: "1.600.445.333",
+                timetable: "9:30 AM - 6:00 PM",
+                image: "../assets/img/new-york-bk-800x530.jpg"
+            }
+        }
+    }
 }
 </script>
 
@@ -10,56 +30,12 @@ export default {
 
 
             <!-- New York -->
-            <div class="ms_branch col-lg-6 ">
-                <!-- Img -->
-                <img src="../assets/img/new-york-bk-800x530.jpg" alt="New York branch">
-                <!-- Text -->
-                <div class="ms_branch__ny py-3">
-                    <div class="row text-center">
-                        <div class="col-12 ">
-                            <h4>New York</h4>
-                        </div>
-                        <div class="col-4">
-                            <h6 class="ms_little-caption">call us</h6>
-                            <span>1.800.345.333</span>
-                        </div>
-                        <div class="col-4">
-                            <h6 class="ms_little-caption">open all week</h6>
-                            <span>9:00 AM - 6:00 PM</span>
-                        </div>
-                        <div class="col-4">
-                            <button class="btn ms_btn-light">View Map</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <AppBranchesCard :location="newYork" class="ms_background-1" />
             <!-- / New York -->
 
 
             <!-- London -->
-            <div class="ms_branch col-lg-6 ">
-                <!-- Img -->
-                <img src="../assets/img/london-bk-800x530.jpg" alt="London branch">
-                <!-- Text -->
-                <div class="ms_branch__london py-3">
-                    <div class="row text-center">
-                        <div class="col-12 ">
-                            <h4>London</h4>
-                        </div>
-                        <div class="col-4">
-                            <h6 class="ms_little-caption">call us</h6>
-                            <span>1.800.345.333</span>
-                        </div>
-                        <div class="col-4">
-                            <h6 class="ms_little-caption">open all week</h6>
-                            <span>9:00 AM - 6:00 PM</span>
-                        </div>
-                        <div class="col-4">
-                            <button class="btn ms_btn-light">View Map</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <AppBranchesCard :location="london" class="ms_background-2" />
             <!-- / London -->
 
         </div>
@@ -69,17 +45,11 @@ export default {
 <style lang="scss" scoped>
 @use "../styles/partials/variables" as*;
 
-.ms_branch {
-    img {
-        width: 100%;
-    }
+.ms_background-1 {
+    background-color: $bg-visit-ny;
+}
 
-    &__ny {
-        background-color: $bg-visit-ny;
-    }
-
-    &__london {
-        background-color: $bg-visit-london;
-    }
+.ms_background-2 {
+    background-color: $bg-visit-london;
 }
 </style>

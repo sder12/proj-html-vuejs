@@ -1,11 +1,11 @@
 <script>
-import { store } from "../store"
+import { store } from "../store";
+import ChevronSlider from "./ChevronSlider.vue";
 export default {
     name: "AppProductAll",
+    components: { ChevronSlider },
     data() {
-        return {
-            store
-        }
+        return { store }
     },
     methods: {
         getImage(pathImg) {
@@ -25,15 +25,17 @@ export default {
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
                 <button class="btn ms_btn-dark">Shop All Products</button>
             </div>
+            <!-- / Text -->
+
+
             <!-- Slider -->
             <div class="ms_product-slider col-lg-8 col-12 g-0 position-relative">
-                <!-- Images -->
 
-
-
+                <!-- Product Cards -->
                 <div class="row row-cols-4 g-3">
 
-                    <div class="ms_slider col-3" v-for="(product, inde ) in store.products" :key="index">
+                    <div class="ms_slider col-3" v-for="(product, index) in store.products" :key="index">
+                        <!-- Image -->
                         <div class="ms_slider__img positon-relative">
                             <img :src="getImage(product.image)" :alt="product.prod">
 
@@ -41,30 +43,22 @@ export default {
                                 <span>select options / quick view</span>
                             </div>
                         </div>
-                        <div class="ms_slider__text text-center">
+                        <!-- Text Label -->
+                        <div class="ms_slider__text text-center mt-3 fw-4">
                             <h5>{{ product.prod }}</h5>
                             <span>{{ product.price }}</span>
                         </div>
                     </div>
 
                 </div>
+                <!-- / Product Cards -->
 
 
 
                 <!-- CTA chevron -->
-
-                <div class="ms_cta-slider d-flex justify-content-between">
-                    <div class="ms_cta-slider-left">
-                        <i class="fa-solid fa-chevron-left"></i>
-                    </div>
-                    <div class="ms_cta-slider-right">
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </div>
-                </div>
-
-
+                <ChevronSlider />
             </div>
-
+            <!-- / Slider -->
 
 
         </div>

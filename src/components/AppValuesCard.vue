@@ -24,7 +24,7 @@ export default {
 
                 <!-- TOP Title + number -->
                 <div class="ms_value-txt-inner-title">
-                    <h2 class="ms-values-title">
+                    <h2 class="ms_values-title">
                         {{ value.title }}
                     </h2>
                     <h2 class="ms_values-numbers">

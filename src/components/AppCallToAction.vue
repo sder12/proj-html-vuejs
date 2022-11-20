@@ -17,13 +17,14 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../styles/partials/variables" as*;
-
 .cta {
     padding: 5em 10em;
+    max-width: 65%;
 
-    h3 {
+    h3,
+    span {
         margin: .5em 0 2em;
+        color: white;
     }
 }
 </style>

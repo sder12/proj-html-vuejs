@@ -1,7 +1,9 @@
 <script>
-import { store } from "../store"
+import { store } from "../store";
+import ChevronSlider from "./ChevronSlider.vue";
 export default {
     name: "AppProduct",
+    components: { ChevronSlider },
     data() {
         return { store }
     },
@@ -37,14 +39,8 @@ export default {
                 </div>
 
                 <!-- CTA chevron -->
-                <div class="ms_cta-slider d-flex justify-content-between">
-                    <div class="ms_cta-slider-left ">
-                        <i class="fa-solid fa-chevron-left"></i>
-                    </div>
-                    <div class="ms_cta-slider-right">
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </div>
-                </div>
+                <ChevronSlider />
+
             </div>
         </div>
     </section>

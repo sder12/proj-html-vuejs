@@ -11,6 +11,7 @@ import AppBranches from "./components/AppBranches.vue";
 import AppSharing from "./components/AppSharing.vue";
 import AppCallToAction from "./components/AppCallToAction.vue";
 import AppFooter from "./components/AppFooter.vue";
+import ChevronToTop from "./components/ChevronToTop.vue";
 
 export default {
   components: {
@@ -25,6 +26,7 @@ export default {
     AppSharing,
     AppCallToAction,
     AppFooter,
+    ChevronToTop,
   },
   data() {
     return {
@@ -43,14 +45,13 @@ export default {
       <!-- Header & Banner-->
       <AppHeader :navHeader=store.navMenu id="ms_header" />
       <AppBanner />
-
       <!-- Header & Banner-->
     </div>
     <!-- /Wrapper Jumbo -->
 
 
     <!-- Wrapper Main -->
-    <div class="ms_wrapper ">
+    <div class="ms_wrapper">
       <AppProduct class="ms_mt-4" />
       <AppSectionTitle class="ms_mt-4" :titleSection=store.sectionsTitle[0] />
       <AppGallery class="mt-4" />
@@ -74,11 +75,11 @@ export default {
     <AppFooter :navFooter=store.navMenu :socialMenu=store.socialNetwork />
     <!-- / Footer -->
 
-    <div class=" ms_wrapper">
-      <a href="#ms_header" id="ms_chevron">
-        <i class="fa-solid fa-chevron-up"></i>
-      </a>
-    </div>
+    <!-- Chevron  -->
+    <ChevronToTop />
+    <!-- / Chevron  -->
+
+
   </div>
   <!-- / container -->
 </template>
@@ -95,6 +96,14 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  >* {
+    max-width: $wrapper-max-width;
+  }
+
+  #ms_header {
+    max-width: $container-max-width;
+  }
 }
 
 .ms_wrapper-jumbotron {
@@ -103,16 +112,5 @@ export default {
 
 .ms_wrapper-cta {
   background-image: url("../src/assets/img/call-to-action-bg.jpg");
-}
-
-//Chevron go to top page
-#ms_chevron {
-  position: fixed;
-  bottom: 0em;
-  right: .3em;
-  padding: .5em 1em;
-  background-color: $bg-chevron-footer;
-  color: white;
-  border-radius: 5px 5px 0px 0px;
 }
 </style>

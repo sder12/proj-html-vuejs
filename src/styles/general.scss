@@ -48,7 +48,6 @@ button {
 //LAYOUT
 .ms_container {
     width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
     background-color: $bg-container;
     position: relative;
@@ -57,6 +56,7 @@ button {
 .ms_wrapper {
     width: 90%;
     margin: 0 auto;
+    max-width: $wrapper-max-width;
 }
 
 //MARGIN-PADDING
@@ -72,26 +72,26 @@ button {
 .ms_btn-light {
     background-color: $lighten-txt;
     color: $dark-txt;
+    font-weight: 600;
 }
 
 .ms_btn-dark {
     background-color: $dark-txt;
     color: white;
+    font-weight: 500;
 }
 
 .ms_btn-light:hover,
 .ms_btn-dark:hover {
     background-color: $bg-chevron-slider;
-}
-
-.ms_btn-dark:hover {
     color: $dark-txt;
 }
 
-.ms_btn-light:hover {
-    color: $lighten-txt
+.ms_btn-light,
+.ms_btn-dark {
+    font-size: .8rem;
+    letter-spacing: .5px;
 }
-
 
 //Typography
 h1,
@@ -124,33 +124,11 @@ h5 {
     font-size: .7rem;
 }
 
-
-.ms_btn-light,
-.ms_btn-dark {
-    font-size: .8rem;
-    font-weight: 600;
-    letter-spacing: .5px;
-}
-
-.ms-values-title {
+.ms_values-title {
     font-size: 2.4rem;
 }
 
 .ms_values-numbers {
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: 100;
-}
-
-
-//Chevron slider
-.ms_cta-slider {
-    width: 100%;
-    cursor: pointer;
-    position: absolute;
-
-    >* {
-        background-color: $bg-chevron-slider;
-        padding: 1em .5em;
-        color: white;
-    }
 }

@@ -76,6 +76,7 @@ export default {
 
 .footer {
     padding: 3em 2em;
+    max-width: $container-max-width;
 }
 
 //Styling

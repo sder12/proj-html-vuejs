@@ -109,6 +109,35 @@ export const store = reactive({
             title: "Visit our Bakeries",
             subtitle: "Locations"
         }
+    ],
+
+    products: [
+
+        {
+            prod: "Choco Chip Cookies",
+            type: "Cookies, Pastries",
+            price: "$19.00 -$39.00",
+            image: "../assets/img/slider/choco-chip-cookies-600x765.jpg"
+        },
+        {
+            prod: "Strawberry Jam Cookies",
+            type: "Cookies, Pastries",
+            price: "$24.00 - $62.00",
+            image: "../assets/img/slider/strawberry-jam-cookies-600x765.jpg"
+        },
+        {
+            prod: "Strawberry Donut",
+            type: "Donut, Pastries",
+            price: "$24.00 -$24.00",
+            image: "../assets/img/slider/strawberry-donut-600x765.jpg"
+        },
+        {
+            prod: "Perfect Macarons",
+            type: "Macarons, Pastries",
+            price: "$18.00 -$52.00",
+            image: "../assets/img/slider/perfect-macarons-600x765.jpg"
+        }
+
     ]
 });
 

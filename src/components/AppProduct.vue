@@ -1,6 +1,15 @@
 <script>
+import { store } from "../store"
 export default {
-    name: "AppProduct"
+    name: "AppProduct",
+    data() {
+        return { store }
+    },
+    methods: {
+        getImage(pathImg) {
+            return new URL(pathImg, import.meta.url).href
+        }
+    }
 }
 </script>
 
@@ -22,13 +31,8 @@ export default {
             <div class="ms_product-slider col-8 position-relative">
                 <!-- IMG -->
                 <div class="row g-3">
-                    <!-- First img -->
-                    <div class="col-6">
-                        <img src="../assets/img/slider/choco-chip-cookies-600x765.jpg" alt="choco cips cookies">
-                    </div>
-                    <!-- Second img -->
-                    <div class="col-6 ">
-                        <img src="../assets/img/slider/strawberry-jam-cookies-600x765.jpg" alt="strawberry jam cookies">
+                    <div class="col-6" v-for="(product, index) in store.products.slice(0, 2)" :key="index">
+                        <img :src="getImage(product.image)" :alt="product.prod">
                     </div>
                 </div>
 

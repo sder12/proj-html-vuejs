@@ -1,6 +1,17 @@
 <script>
+import { store } from "../store"
 export default {
-    name: "AppProductAll"
+    name: "AppProductAll",
+    data() {
+        return {
+            store
+        }
+    },
+    methods: {
+        getImage(pathImg) {
+            return new URL(pathImg, import.meta.url).href
+        }
+    }
 }
 </script>
 
@@ -17,52 +28,25 @@ export default {
             <!-- Slider -->
             <div class="ms_product-slider col-lg-8 col-12 g-0 position-relative">
                 <!-- Images -->
-                <div class="row row-cols-4 g-3">
-                    <!-- First img -->
-                    <div class="ms_slider col-3">
-                        <div class="ms_slider__img">
-                            <img src="../assets/img/slider/choco-chip-cookies-600x765.jpg" alt="choco cips cookies">
 
+
+
+                <div class="row row-cols-4 g-3">
+
+                    <div class="ms_slider col-3" v-for="(product, inde ) in store.products" :key="index">
+                        <div class="ms_slider__img positon-relative">
+                            <img :src="getImage(product.image)" :alt="product.prod">
+
+                            <div class="ms_slider-hover position-absolute top-50">
+                                <span>select options / quick view</span>
+                            </div>
                         </div>
                         <div class="ms_slider__text text-center">
-                            <h5>Choco Chip Cookies</h5>
-                            <span>$19.00 -$39.00</span>
+                            <h5>{{ product.prod }}</h5>
+                            <span>{{ product.price }}</span>
                         </div>
                     </div>
-                    <!-- Second -->
-                    <div class="ms_slider col-3">
-                        <div class="ms_slider__img">
-                            <img src="../assets/img/slider/strawberry-jam-cookies-600x765.jpg"
-                                alt="strawberry jam cookies">
 
-                        </div>
-                        <div class="ms_slider__text  text-center">
-                            <h5>Choco Chip Cookies</h5>
-                            <span>$19.00 -$39.00</span>
-                        </div>
-                    </div>
-                    <!-- Third-->
-                    <div class="ms_slider col-3">
-                        <div class="ms_slider__img">
-                            <img src="../assets/img/slider/strawberry-donut-600x765.jpg" alt="perfect macarons">
-
-                        </div>
-                        <div class="ms_slider__text  text-center">
-                            <h5>Choco Chip Cookies</h5>
-                            <span>$19.00 -$39.00</span>
-                        </div>
-                    </div>
-                    <!-- Last img -->
-                    <div class="ms_slider col-3">
-                        <div class="ms_slider__img">
-                            <img src="../assets/img/slider/perfect-macarons-600x765.jpg" alt="perfect macarons">
-
-                        </div>
-                        <div class="ms_slider__text  text-center">
-                            <h5>Choco Chip Cookies</h5>
-                            <span>$19.00 -$39.00</span>
-                        </div>
-                    </div>
                 </div>
 
 
@@ -97,5 +81,20 @@ export default {
 
 .ms_slider__text {
     color: $dark-txt;
+}
+
+
+.ms_slider:hover .ms_slider-hover {
+    opacity: 1;
+}
+
+.ms_slider-hover {
+    opacity: 0;
+    text-transform: uppercase;
+    color: $lighten-txt;
+    font-size: .5rem;
+    text-align: center;
+    font-weight: 700;
+
 }
 </style>

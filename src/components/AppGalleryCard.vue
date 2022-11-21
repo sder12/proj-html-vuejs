@@ -19,12 +19,12 @@ export default {
         <!-- STATIC-->
         <div class="position-relative">
             <!-- Img Visible -->
-            <img :src="getImage(galleryImg.imgVisible)" :alt="imgAlt">
+            <img :src="getImage(galleryImg.imgVisible)" :alt="galleryImg.imgAlt">
 
             <!-- HOVER -->
             <div class="ms_gallery-hover">
                 <!-- Img Visible with hover -->
-                <img :src="getImage(galleryImg.imgHover)" :alt="imgAlt">
+                <img :src="getImage(galleryImg.imgHover)" :alt="galleryImg.imgAlt">
                 <!-- Text Visible with hover -->
                 <div class="ms_gallery-hover-txt text-center ">
                     <span class="ms_little-caption">

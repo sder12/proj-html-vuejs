@@ -16,10 +16,32 @@ export default {
             return new URL(pathImg, import.meta.url).href
         },
         moveForward() {
-            console.log("forward")
+            if (this.second < this.store.products.length - 1) {
+                this.second++
+            } else {
+                this.second = 0
+            }
+
+            if (this.first < this.store.products.length - 1) {
+                this.first++
+            } else {
+                this.first = 0
+            }
         },
         moveBackward() {
-            console.log("backward")
+            if (this.second == 0) {
+                this.second = this.store.products.length - 1
+            } else {
+                this.second--
+            }
+
+            if (this.first == 0) {
+                this.first = this.store.products.length - 1
+            } else {
+                this.first--
+            }
+            console.log("first", this.first)
+            console.log("second", this.second)
         }
     }
 }

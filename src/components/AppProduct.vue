@@ -1,14 +1,16 @@
 <script>
 import { store } from "../store";
+import AppProductCard from "./AppProductCard.vue";
 import ChevronSlider from "./ChevronSlider.vue";
+
 export default {
     name: "AppProduct",
-    components: { ChevronSlider },
+    components: { ChevronSlider, AppProductCard },
     data() {
         return {
             store,
-            first: 0,
-            second: 1,
+            firstImg: 0,
+            secondImg: 1,
         }
     },
     methods: {
@@ -16,32 +18,29 @@ export default {
             return new URL(pathImg, import.meta.url).href
         },
         moveForward() {
-            if (this.second < this.store.products.length - 1) {
-                this.second++
+            if (this.secondImg < this.store.products.length - 1) {
+                this.secondImg++
             } else {
-                this.second = 0
+                this.secondImg = 0
             }
-
-            if (this.first < this.store.products.length - 1) {
-                this.first++
+            if (this.firstImg < this.store.products.length - 1) {
+                this.firstImg++
             } else {
-                this.first = 0
+                this.firstImg = 0
             }
         },
         moveBackward() {
-            if (this.second == 0) {
-                this.second = this.store.products.length - 1
+            if (this.secondImg == 0) {
+                this.secondImg = this.store.products.length - 1
             } else {
-                this.second--
+                this.secondImg--
             }
 
-            if (this.first == 0) {
-                this.first = this.store.products.length - 1
+            if (this.firstImg == 0) {
+                this.firstImg = this.store.products.length - 1
             } else {
-                this.first--
+                this.firstImg--
             }
-            console.log("first", this.first)
-            console.log("second", this.second)
         }
     }
 }
@@ -61,32 +60,14 @@ export default {
                 </h4>
                 <button class="btn ms_btn-dark">Start shopping</button>
             </div>
+
+
             <!-- Slider -->
             <div class="ms_product-slider col-8 position-relative">
                 <!-- IMG -->
                 <div class="row g-3">
-                    <div class="ms_product-slider col-6 positon-relative ">
-                        <div class="ms_slider-image d-flex justify-content-center align-items-center">
-                            <img :src="getImage(store.products[first].image)" :alt="store.products[first].prod">
-
-                            <div class="ms_slider-hover position-absolute text-center">
-                                <h3>{{ store.products[first].prod }}</h3>
-                                <span>{{ store.products[first].type }}</span>
-                                <span>{{ store.products[first].price }}</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ms_product-slider col-6 positon-relative ">
-                        <div class="ms_slider-image d-flex justify-content-center align-items-center">
-                            <img :src="getImage(store.products[second].image)" :alt="store.products[second].prod">
-
-                            <div class="ms_slider-hover position-absolute text-center">
-                                <h3>{{ store.products[second].prod }}</h3>
-                                <span>{{ store.products[second].type }}</span>
-                                <span>{{ store.products[second].price }}</span>
-                            </div>
-                        </div>
-                    </div>
+                    <AppProductCard :indexArray=firstImg />
+                    <AppProductCard :indexArray=secondImg />
                 </div>
 
                 <!-- CTA chevron -->
@@ -99,43 +80,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../styles/partials/variables" as*;
-@use "../styles/partials/mixins" as*;
-
 .ms_cta-slider {
     top: 40%;
-}
-
-
-.ms_slider-image:hover .ms_slider-hover {
-    opacity: 1;
-}
-
-.ms_slider-image:hover img {
-    filter: brightness(70%)
-}
-
-.ms_slider-hover {
-    opacity: 0;
-    top: 20%;
-    width: 200px;
-
-    //Typography
-    text-transform: capitalize;
-    color: $lighten-txt !important;
-    font-size: 1.4rem;
-    font-weight: 700;
-
-    h3 {
-        color: $lighten-txt !important;
-        font-size: 1.2rem;
-    }
-
-    span {
-        display: inline-block;
-        font-size: 1rem;
-        font-weight: 400;
-    }
-
 }
 </style>

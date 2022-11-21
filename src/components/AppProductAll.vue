@@ -5,11 +5,27 @@ export default {
     name: "AppProductAll",
     components: { ChevronSlider },
     data() {
-        return { store }
+        return {
+            store,
+            newProdArray: [...store.products],
+        }
     },
     methods: {
         getImage(pathImg) {
             return new URL(pathImg, import.meta.url).href
+        },
+        moveForward() {
+            let arrayLength = this.newProdArray.length - 1;
+            let element = this.newProdArray.splice(arrayLength, 1)[0];
+            //console.log("element", element)
+            this.newProdArray.splice(0, 0, element)
+        },
+        moveBackward() {
+            let arrayLength = this.newProdArray.length - 1;
+            let element = this.newProdArray.splice(0, 1)[0];
+            //console.log("element", element)
+            this.newProdArray.splice(arrayLength, 0, element)
+
         }
     }
 }
@@ -34,7 +50,7 @@ export default {
                 <!-- Product Cards -->
                 <div class="row row-cols-4 g-3">
 
-                    <div class="ms_slider col-3 " v-for="(product, index) in store.products" :key="index">
+                    <div class="ms_slider col-3 " v-for="(product, index) in newProdArray" :key="index">
                         <!-- Image -->
                         <div
                             class="ms_slider__img positon-relative d-flex justify-content-center align-items-center text-center">
@@ -58,7 +74,7 @@ export default {
 
 
                 <!-- CTA chevron -->
-                <ChevronSlider />
+                <ChevronSlider @chevronRightClicked="moveForward()" @chevronLeftClicked="moveBackward()" />
             </div>
             <!-- / Slider -->
 

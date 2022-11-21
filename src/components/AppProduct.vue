@@ -5,11 +5,21 @@ export default {
     name: "AppProduct",
     components: { ChevronSlider },
     data() {
-        return { store }
+        return {
+            store,
+            first: 0,
+            second: 1,
+        }
     },
     methods: {
         getImage(pathImg) {
             return new URL(pathImg, import.meta.url).href
+        },
+        moveForward() {
+            console.log("forward")
+        },
+        moveBackward() {
+            console.log("backward")
         }
     }
 }
@@ -33,22 +43,32 @@ export default {
             <div class="ms_product-slider col-8 position-relative">
                 <!-- IMG -->
                 <div class="row g-3">
-                    <div class="ms_product-slider col-6 positon-relative "
-                        v-for="(product, index) in store.products.slice(0, 2)" :key="index">
+                    <div class="ms_product-slider col-6 positon-relative ">
                         <div class="ms_slider-image d-flex justify-content-center align-items-center">
-                            <img :src="getImage(product.image)" :alt="product.prod">
+                            <img :src="getImage(store.products[first].image)" :alt="store.products[first].prod">
 
                             <div class="ms_slider-hover position-absolute text-center">
-                                <h3>{{ product.prod }}</h3>
-                                <span>{{ product.type }}</span>
-                                <span>{{ product.price }}</span>
+                                <h3>{{ store.products[first].prod }}</h3>
+                                <span>{{ store.products[first].type }}</span>
+                                <span>{{ store.products[first].price }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms_product-slider col-6 positon-relative ">
+                        <div class="ms_slider-image d-flex justify-content-center align-items-center">
+                            <img :src="getImage(store.products[second].image)" :alt="store.products[second].prod">
+
+                            <div class="ms_slider-hover position-absolute text-center">
+                                <h3>{{ store.products[second].prod }}</h3>
+                                <span>{{ store.products[second].type }}</span>
+                                <span>{{ store.products[second].price }}</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- CTA chevron -->
-                <ChevronSlider />
+                <ChevronSlider @chevronRightClicked="moveForward()" @chevronLeftClicked="moveBackward()" />
 
             </div>
         </div>

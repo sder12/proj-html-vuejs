@@ -116,7 +116,7 @@ export const store = reactive({
         {
             prod: "Choco Chip Cookies",
             type: "Cookies, Pastries",
-            price: "$19.00 -$39.00",
+            price: "$19.00 - $39.00",
             image: "../assets/img/slider/choco-chip-cookies-600x765.jpg"
         },
         {
@@ -128,13 +128,13 @@ export const store = reactive({
         {
             prod: "Strawberry Donut",
             type: "Donut, Pastries",
-            price: "$24.00 -$24.00",
+            price: "$24.00 - $24.00",
             image: "../assets/img/slider/strawberry-donut-600x765.jpg"
         },
         {
             prod: "Perfect Macarons",
             type: "Macarons, Pastries",
-            price: "$18.00 -$52.00",
+            price: "$18.00 - $52.00",
             image: "../assets/img/slider/perfect-macarons-600x765.jpg"
         }
 

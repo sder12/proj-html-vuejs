@@ -34,14 +34,16 @@ export default {
                 <!-- Product Cards -->
                 <div class="row row-cols-4 g-3">
 
-                    <div class="ms_slider col-3" v-for="(product, index) in store.products" :key="index">
+                    <div class="ms_slider col-3 " v-for="(product, index) in store.products" :key="index">
                         <!-- Image -->
-                        <div class="ms_slider__img positon-relative">
+                        <div
+                            class="ms_slider__img positon-relative d-flex justify-content-center align-items-center text-center">
                             <img :src="getImage(product.image)" :alt="product.prod">
 
-                            <div class="ms_slider-hover position-absolute top-50">
-                                <span>select options / quick view</span>
+                            <div class="ms_slider-hover position-absolute">
+                                <span>select options / quick view </span>
                             </div>
+
                         </div>
                         <!-- Text Label -->
                         <div class="ms_slider__text text-center mt-3 fw-4">
@@ -82,13 +84,19 @@ export default {
     opacity: 1;
 }
 
+.ms_slider:hover img {
+    filter: brightness(70%)
+}
+
 .ms_slider-hover {
     opacity: 0;
+    top: 20%;
+    width: 100px;
+    //Typography
     text-transform: uppercase;
     color: $lighten-txt;
-    font-size: .5rem;
-    text-align: center;
+    font-size: 1rem;
     font-weight: 700;
-
+    cursor: pointer
 }
 </style>

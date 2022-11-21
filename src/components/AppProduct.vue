@@ -33,8 +33,17 @@ export default {
             <div class="ms_product-slider col-8 position-relative">
                 <!-- IMG -->
                 <div class="row g-3">
-                    <div class="col-6" v-for="(product, index) in store.products.slice(0, 2)" :key="index">
-                        <img :src="getImage(product.image)" :alt="product.prod">
+                    <div class="ms_product-slider col-6 positon-relative "
+                        v-for="(product, index) in store.products.slice(0, 2)" :key="index">
+                        <div class="ms_slider-image d-flex justify-content-center align-items-center">
+                            <img :src="getImage(product.image)" :alt="product.prod">
+
+                            <div class="ms_slider-hover position-absolute text-center">
+                                <h3>{{ product.prod }}</h3>
+                                <span>{{ product.type }}</span>
+                                <span>{{ product.price }}</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -53,5 +62,38 @@ export default {
 
 .ms_cta-slider {
     top: 40%;
+}
+
+
+.ms_slider-image:hover .ms_slider-hover {
+    opacity: 1;
+}
+
+.ms_slider-image:hover img {
+    filter: brightness(70%)
+}
+
+.ms_slider-hover {
+    opacity: 0;
+    top: 20%;
+    width: 200px;
+
+    //Typography
+    text-transform: capitalize;
+    color: $lighten-txt !important;
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    h3 {
+        color: $lighten-txt !important;
+        font-size: 1.2rem;
+    }
+
+    span {
+        display: inline-block;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
 }
 </style>

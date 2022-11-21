@@ -14,27 +14,21 @@ export default {
                 valueNumber: "01",
                 title: "Tell us what you have in mind",
                 subTitle: "manual ingredients selection",
-                paragraph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-                srcImg: "../assets/img/values/bakery-process-1.jpg",
-                altImg: "Bakery process",
+                paragraph: "Cras consequat lectus vestibulum tortor pulvinar, quis euismod nisl varius.Ut eu laoreet ex.Aliquam erat volutpat. Nullam quis sagittis nibh.Morbi consectetur ultricies ante ac congue.Donec lorem erat, finibus in velit placerat, rutrum augue.",
                 align: "end",
             },
             valueSecond: {
                 valueNumber: "02",
                 title: "We Start Baking",
                 subTitle: "sweet & delicious",
-                paragraph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-                srcImg: "../assets/img/values/bakery-process-2.jpg",
-                altImg: "Bakery process",
+                paragraph: "Cras consequat lectus vestibulum tortor pulvinar, quis euismod nisl varius.Ut eu laoreet ex.Aliquam erat volutpat. Nullam quis sagittis nibh.",
                 align: "start",
             },
             valueThird: {
                 valueNumber: "03",
                 title: "Delivered to your home",
                 subTitle: "baked to order & gift wrapper",
-                paragraph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-                srcImg: "../assets/img/values/bakery-process-3.jpg",
-                altImg: "Bakery process",
+                paragraph: "Cras consequat lectus vestibulum tortor pulvinar, quis euismod nisl varius.Ut eu laoreet ex.Aliquam erat volutpat. Nullam quis sagittis nibh.Morbi consectetur ultricies ante ac congue.Donec lorem erat, finibus in velit placerat, rutrum augue.",
                 align: "start",
             }
         }
@@ -46,13 +40,13 @@ export default {
     <section class="ms_values container-fluid g-0">
         <div class="row align-items-stretch gy-4 gx-0">
 
-            <!-- Value One -->
-            <div class="overlay col-12">
+            <!-- Value First -->
+            <div class="ms_bg-1 col-12">
                 <AppValuesCard :value="valueOne" />
             </div>
 
             <!-- Value Second -->
-            <div class="overlay col-6 ">
+            <div class="ms_bg-2 col-6 ">
                 <AppValuesCard :value="valueSecond" />
             </div>
 
@@ -68,7 +62,7 @@ export default {
             </div>
 
             <!-- Value Third -->
-            <div class="overlay col-12">
+            <div class="ms_bg-3 col-12">
                 <AppValuesCard :value="valueThird" />
             </div>
 
@@ -79,15 +73,35 @@ export default {
 <style lang="scss" scoped>
 @use "../styles/partials/variables" as*;
 
-.overlay {
-    background-color: black;
-}
-
+//SQUARE TEXT QUOTE
 .ms_values-text {
     >* {
         height: 100%;
         background-color: $bg-simple;
-        padding: 0 4em;
+        padding: 4em 4em;
     }
+}
+
+
+// BACKGROUND IMAGE
+.ms_bg-1,
+.ms_bg-2,
+.ms_bg-3 {
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ms_bg-1 {
+    background-image: url("../assets/img/values/bakery-process-1.jpg");
+}
+
+.ms_bg-2 {
+    background-image: url("../assets/img/values/bakery-process-2.jpg");
+}
+
+.ms_bg-3 {
+    background-image: url("../assets/img/values/bakery-process-3.jpg");
 }
 </style>

@@ -13,8 +13,10 @@ export default {
             <span class="ms_little-caption">fresh & tasty bakery every day</span>
             <h1>The Perfect Fresh Bread</h1>
             <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Officia enim ea, odio facilis suscipit incidunt
+                Cras consequat lectus vestibulum tortor pulvinar, quis
+                euismod nisl varius. Ut eu laoreet ex. Aliquam erat volutpat.
+                Nullam quis sagittis nibh. Morbi consectetur ultricies ante ac
+                congue.
             </p>
             <button class="btn ms_btn-light">
                 Explore our products

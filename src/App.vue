@@ -96,6 +96,7 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: #f1e5ef;
 
   >* {
     max-width: $wrapper-max-width;
@@ -108,6 +109,7 @@ export default {
 
 .ms_wrapper-jumbotron {
   background-image: url("../src/assets/img/hero-header-bakery.jpg");
+  // background-color: blue;
 }
 
 .ms_wrapper-cta {

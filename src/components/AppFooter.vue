@@ -15,7 +15,7 @@ export default {
         <section class="ms_footer-top row">
 
             <!-- Footer Nav -->
-            <div class="ms_footer-nav col-lg-8 col-md-12">
+            <div class="ms_footer-nav col-lg-8 col-md-12 ">
                 <!-- Logo -->
                 <div class="ms_footer-nav__logo">
                     <img src="../assets/img/logo/avada-bakery-logo-retina-200x97.png" alt="Bakery logo">
@@ -37,6 +37,7 @@ export default {
             <!-- Footer Subscribe -->
             <div class="ms_footer-subscribe col-lg-4 col-md-12 text-lg-end text-md-start">
                 <h5>Subscribe to our Newsletter</h5>
+                <!-- Inpu + btn -->
                 <div class="ms_subscribe-email d-flex gap-2 mt-4">
                     <div class="input-group">
                         <label for="subscribe" class="sr-only">Enter email address</label>
@@ -56,7 +57,7 @@ export default {
 
             <!-- Footer Social -->
             <div class="ms_footer-social col-lg-4 col-md-12 ">
-                <ul class="d-flex gap-4  justify-content-lg-end justify-content-md-start">
+                <ul class="d-flex gap-4 justify-content-lg-end justify-content-center">
                     <li v-for="(social, index) in socialMenu" :key="index">
                         <a :href="social.url">
                             <i :class="`fa-brands fa-${social.name}`"></i>
@@ -109,6 +110,7 @@ export default {
 
 .ms_footer-social {
     color: $dark-txt;
+    font-size: 1.2rem;
 }
 
 .ms_copyright-txt {

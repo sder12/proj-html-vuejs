@@ -18,6 +18,7 @@ export default {
 
         <!-- STATIC-->
         <div class="position-relative">
+
             <!-- Img Visible -->
             <img :src="getImage(galleryImg.imgVisible)" :alt="galleryImg.imgAlt">
 
@@ -39,6 +40,7 @@ export default {
                 </div>
             </div>
             <!-- / HOVER -->
+
         </div>
         <!-- /STATIC-->
 

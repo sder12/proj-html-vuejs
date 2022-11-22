@@ -9,6 +9,7 @@ export default {
     data() {
         return {
             store,
+            //firstImg has index 0, secondImg index 1
             firstImg: 0,
             secondImg: 1,
         }
@@ -17,6 +18,7 @@ export default {
         getImage(pathImg) {
             return new URL(pathImg, import.meta.url).href
         },
+        //Slider using index store-array
         moveForward() {
             if (this.secondImg < this.store.products.length - 1) {
                 this.secondImg++
@@ -35,7 +37,6 @@ export default {
             } else {
                 this.secondImg--
             }
-
             if (this.firstImg == 0) {
                 this.firstImg = this.store.products.length - 1
             } else {
@@ -51,29 +52,31 @@ export default {
         <div class="row g-0">
 
             <!-- Text -->
-            <div class="ms_product-text col-4 pe-5">
+            <div class="ms_product-text pe-5 col-lg-4 col-sm-12  text-lg-start text-sm-center">
                 <span class="ms_little-caption"> our products</span>
-                <h4>
+                <h4 class="mt-3 ">
                     All our delectable pastries are backed fresh in our
                     Kitchen very morning, and are made with all-natural,
                     all organic ingredients.
                 </h4>
-                <button class="btn ms_btn-dark">Start shopping</button>
+                <button class="btn ms_btn-dark mt-lg-5 mt-2">Start shopping</button>
             </div>
+            <!-- / Text -->
 
 
             <!-- Slider -->
-            <div class="ms_product-slider col-8 position-relative">
+            <div class="ms_product-slider col-lg-8  col-sm-12 mt-sm-4 position-relative">
                 <!-- IMG -->
                 <div class="row g-3">
-                    <AppProductCard :indexArray=firstImg />
-                    <AppProductCard :indexArray=secondImg />
+                    <AppProductCard :indexArray=firstImg :arrayProds=store.products />
+                    <AppProductCard :indexArray=secondImg :arrayProds=store.products />
                 </div>
 
                 <!-- CTA chevron -->
                 <ChevronSlider @chevronRightClicked="moveForward()" @chevronLeftClicked="moveBackward()" />
-
             </div>
+            <!-- / Slider -->
+
         </div>
     </section>
 

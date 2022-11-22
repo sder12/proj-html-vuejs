@@ -29,8 +29,9 @@ export default {
 </script>
 
 <template>
+
     <section class="ms_gallery container-fluid g-0">
-        <div class="row g-3">
+        <div class="row g-5">
             <AppGalleryCard v-for="(events, index) in galleryEvents" :key="index" :galleryImg="events" />
         </div>
     </section>

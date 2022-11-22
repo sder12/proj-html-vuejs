@@ -99,7 +99,7 @@ export const store = reactive({
         }
     ],
     //Section Title + subtitle 
-    //DO NOT CHANGE THE ORDER: extractive through index
+    //DO NOT CHANGE THE ORDER: extract through index
     sectionsTitle: [
         {
             title: "Baking Special Moments",
@@ -111,6 +111,7 @@ export const store = reactive({
         }
     ],
 
+    //BAKERY PRODUCTs
     products: [
 
         {

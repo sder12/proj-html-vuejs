@@ -7,12 +7,17 @@ export default {
 
 <template>
     <div class="ms_cta-slider d-flex justify-content-between">
+
+        <!-- CHEVRON BACKWARD -->
         <div class="ms_cta-slider-left" @click="$emit('chevronLeftClicked')">
             <i class="fa-solid fa-chevron-left"></i>
         </div>
+
+        <!-- CHEVRON FORWARD -->
         <div class="ms_cta-slider-right" @click="$emit('chevronRightClicked')">
             <i class="fa-solid fa-chevron-right"></i>
         </div>
+
     </div>
 </template>
 

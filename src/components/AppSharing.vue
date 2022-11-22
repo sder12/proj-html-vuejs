@@ -12,12 +12,12 @@ export default {
                 {
                     imgSrc: "../assets/img/cta-sharing/social-2.jpg",
                     imgAlt: "croissant",
-                    order: 3,
+                    order: 2,
                 },
                 {
                     imgSrc: "../assets/img/cta-sharing/social-3.jpg",
                     imgAlt: "bread",
-                    order: 3,
+                    order: 2,
 
                 },
                 {
@@ -52,11 +52,11 @@ export default {
     <section class="container-fluid g-0">
         <div class="ms_sharing row g-3 align-items-stretch">
 
-            <!-- TeXT -->
-            <div class="ms_sharing__text col-6 order-2">
+            <!-- TEXT order 2-->
+            <div class="ms_sharing__text col-lg-6 col-md-12  order-lg-2  order-3">
                 <div class=" text-center">
                     <span class="ms_little-caption">made for sharing</span>
-                    <h4>Let's stay in touch</h4>
+                    <h4 class="py-2">Let's stay in touch</h4>
                     <button class="btn ms_btn-dark">
                         <i class="fa-brands fa-instagram"></i>
                         Follow us
@@ -64,8 +64,8 @@ export default {
                 </div>
             </div>
 
-            <!-- All images -->
-            <div class="ms_sharing__img col-3" v-for="(photo, index) in sharingImg" :key="index"
+            <!-- IMAGES -- using order(flex) to move the first card before txt -->
+            <div class="ms_sharing__img col-lg-3 col-4" v-for="(photo, index) in sharingImg" :key="index"
                 :class="`order-${photo.order}`">
                 <img :src="getImage(photo.imgSrc)" :alt="photo.imgAlt">
             </div>

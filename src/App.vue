@@ -52,20 +52,20 @@ export default {
 
     <!-- Wrapper Main -->
     <div class="ms_wrapper">
-      <AppProduct class="ms_mt-4" />
-      <AppSectionTitle class="ms_mt-4" :titleSection=store.sectionsTitle[0] />
+      <AppProduct class="ms_mt-section " />
+      <AppSectionTitle class="ms_mt-section " :titleSection=store.sectionsTitle[0] />
       <AppGallery class="mt-4" />
-      <AppProductAll class="ms_mt-4" />
-      <AppValues class="ms_mt-4" />
-      <AppSectionTitle class="ms_mt-4" :titleSection=store.sectionsTitle[1] />
+      <AppProductAll class="ms_mt-section " />
+      <AppValues class="ms_mt-section " />
+      <AppSectionTitle class="ms_mt-section " :titleSection=store.sectionsTitle[1] />
       <AppBranches class="mt-4" />
-      <AppSharing class="ms_mt-4" />
+      <AppSharing class="ms_mt-section " />
     </div>
     <!-- / Wrapper Main -->
 
 
     <!--Wrapper Cta -->
-    <div class="ms_wrapper-cta ms_mt-4">
+    <div class="ms_wrapper-cta ms_mt-section ">
       <AppCallToAction />
     </div>
     <!--/Wrapper Cta -->
@@ -109,7 +109,6 @@ export default {
 
 .ms_wrapper-jumbotron {
   background-image: url("../src/assets/img/hero-header-bakery.jpg");
-  // background-color: blue;
 }
 
 .ms_wrapper-cta {

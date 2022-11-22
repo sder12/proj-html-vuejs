@@ -7,11 +7,13 @@ export default {
 <template>
     <!-- Order cta -->
     <section class="container-fluid">
-        <div class="cta col-lg-12">
+
+        <div class="cta col-lg-8 col-md-10 col-12">
             <span class="ms_little-caption">try our seasonal products</span>
-            <h2>Order for pick-up or delivery to your home</h2>
+            <h2 class="pt-2 pb-5">Order for pick-up or delivery to your home</h2>
             <button class="btn ms_btn-light">Shop Now</button>
         </div>
+
     </section>
     <!-- / Order cta -->
 </template>
@@ -19,7 +21,6 @@ export default {
 <style lang="scss" scoped>
 .cta {
     padding: 5em 10em;
-    max-width: 65%;
 
     h3,
     span {

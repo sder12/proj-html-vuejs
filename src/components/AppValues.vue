@@ -46,17 +46,17 @@ export default {
             </div>
 
             <!-- Value Second -->
-            <div class="ms_bg-2 col-6 ">
+            <div class="ms_bg-2 col-6">
                 <AppValuesCard :value="valueSecond" />
             </div>
 
             <!-- Quote section -->
-            <div class="ms_values-text col-6 ">
+            <div class="ms_values-text col-6">
                 <div class="d-flex justify-content-center align-items-center ms-4">
                     <div>
                         <span class="ms_little-caption">{{ quote.subTitle }}</span>
-                        <h3>&ldquo;{{ quote.sentence }}&rdquo;</h3>
-                        <span class="ms_little-caption text-capitalize">{{ quote.cit }}</span>
+                        <h3 class="mt-3">&ldquo;{{ quote.sentence }}&rdquo;</h3>
+                        <span class="ms_little-caption text-capitalize mt-4">{{ quote.cit }}</span>
                     </div>
                 </div>
             </div>

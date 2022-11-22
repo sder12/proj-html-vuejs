@@ -1,11 +1,10 @@
 <script>
-import { store } from "../store";
 export default {
     name: "AppProductCard",
-    data() {
-        return { store }
+    props: {
+        indexArray: Number,
+        arrayProds: Array
     },
-    props: { indexArray: Number },
     methods: {
         getImage(pathImg) {
             return new URL(pathImg, import.meta.url).href
@@ -20,12 +19,12 @@ export default {
     <div class="ms_product-slider col-6 positon-relative ">
 
         <div class="ms_slider-image d-flex justify-content-center align-items-center">
-            <img :src="getImage(store.products[indexArray].image)" :alt="store.products[indexArray].prod">
+            <img :src="getImage(arrayProds[indexArray].image)" :alt="arrayProds[indexArray].prod">
 
             <div class="ms_slider-hover position-absolute text-center">
-                <h3>{{ store.products[indexArray].prod }}</h3>
-                <span>{{ store.products[indexArray].type }}</span>
-                <span>{{ store.products[indexArray].price }}</span>
+                <h3>{{ arrayProds[indexArray].prod }}</h3>
+                <span>{{ arrayProds[indexArray].type }}</span>
+                <span>{{ arrayProds[indexArray].price }}</span>
             </div>
         </div>
 

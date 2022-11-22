@@ -15,15 +15,21 @@ export default {
 
 <template>
     <!-- New York / London...-->
-    <div class="ms_branch col-lg-6 ">
+    <div class="ms_branch col-lg-6 col-12">
+
         <!-- Img -->
         <img :src="getImage(location.image)" alt="location.name">
+
         <!-- Text -->
-        <div class="py-3">
+        <div class="py-4">
             <div class="row text-center">
-                <div class="col-12 ">
+
+                <!-- City name -->
+                <div class="col-12 pb-3">
                     <h4>{{ location.place }}</h4>
                 </div>
+
+                <!-- Shop info -->
                 <div class="col-4">
                     <h6 class="ms_little-caption">call us</h6>
                     <span>{{ location.phone }}</span>
@@ -35,13 +41,17 @@ export default {
                 <div class="col-4">
                     <button class="btn ms_btn-light">View Map</button>
                 </div>
+
             </div>
         </div>
+
     </div>
     <!-- / New York -->
 
 </template>
 
 <style lang="scss" scoped>
-
+.ms_branch img {
+    width: 100%;
+}
 </style>

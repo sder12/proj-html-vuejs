@@ -29,8 +29,7 @@ export default {
             </div>
 
             <!-- BOTTOM Subtitle + Paragraph -->
-            <div :class="value.align == 'end' ? 'align-self-end text-end' : 'align-self-start'"
-                class="ms_value-txt-white">
+            <div :class="value.align == 'end' ? 'align-self-end' : 'align-self-start'" class="ms_value-txt-white">
                 <span class="ms_little-caption">
                     {{ value.subTitle }}
                 </span>
@@ -68,6 +67,10 @@ export default {
 
         &-title {
             @include flex(row, space-between, space-between);
+        }
+
+        &-numbers {
+            font-weight: 500 !important;
         }
     }
 

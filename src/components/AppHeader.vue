@@ -13,16 +13,17 @@ export default {
         <div class="row align-items-center">
 
             <!-- Logo -->
-            <div class="ms_header__logo col-lg-4 col-md-12">
-                <div class="text-lg-start text-md-center">
+            <div class="ms_header__logo col-lg-4 col-12">
+                <div class="text-lg-start text-center mb-3">
                     <img src="../assets/img/logo/avada-bakery-logo-retina-200x97.png" alt="Bakery logo">
                 </div>
             </div>
             <!-- / Logo -->
 
             <!-- Nav Menu -->
-            <div class="ms_header__nav col-lg-8 col-md-12 ">
-                <ul class="d-flex justify-content-lg-end justify-content-md-center align-items-center mb-0 ">
+            <div class="ms_header__nav col-lg-8 col-12 ">
+                <ul
+                    class="d-flex justify-content-lg-end align-items-lg-end justify-content-center align-items-center mb-0 ">
                     <li v-for="(link, index) in navHeader" :key="index" :class="link.active ? 'active' : ''"
                         v-show="link.headerShow">
                         <a :href="link.url" v-if="link.name !== 'cart'">
@@ -47,7 +48,6 @@ export default {
 
 .ms_header {
     height: $header-height;
-    // padding: 2.8em 1em 0;
 
     //LOGO
     &__logo img {

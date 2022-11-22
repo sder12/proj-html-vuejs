@@ -12,6 +12,7 @@ import AppSharing from "./components/AppSharing.vue";
 import AppCallToAction from "./components/AppCallToAction.vue";
 import AppFooter from "./components/AppFooter.vue";
 import ChevronToTop from "./components/ChevronToTop.vue";
+import DemosSale from "./components/DemosSale.vue";
 
 export default {
   components: {
@@ -27,6 +28,7 @@ export default {
     AppCallToAction,
     AppFooter,
     ChevronToTop,
+    DemosSale
   },
   data() {
     return {
@@ -39,6 +41,7 @@ export default {
 <template>
   <!-- container -->
   <div class="ms_container">
+
 
     <!-- Wrapper Jumbo -->
     <div class="ms_wrapper-jumbotron">
@@ -75,9 +78,13 @@ export default {
     <AppFooter :navFooter=store.navMenu :socialMenu=store.socialNetwork />
     <!-- / Footer -->
 
-    <!-- Chevron  -->
+
+    <!-- ----------- elements removed from the flow -----------  -->
+    <!-- Chevron To header -->
     <ChevronToTop />
-    <!-- / Chevron  -->
+    <!-- Demos Sales Icons -->
+    <DemosSale />
+    <!-- ----------- / elements removed from the flow -----------  -->
 
 
   </div>

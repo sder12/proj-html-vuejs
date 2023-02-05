@@ -17,9 +17,3 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 
 
------
-
-HOVER
-
-![proj-html-vuejs-2](https://user-images.githubusercontent.com/36935960/216841328-4a2614fe-6096-4253-b895-d17849444339.png)
-![proj-html-vuejs-3](https://user-images.githubusercontent.com/36935960/216841337-14cc9636-4197-4d90-8b07-ebe6da9cee74.png)

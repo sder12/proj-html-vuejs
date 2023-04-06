@@ -1,18 +1,24 @@
-# Vue 3 + Vite
+<hr/>
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Bakery Vue.js
+Midterm project, using <a href="https://vitejs.dev/"> Vite </a> & <a href="https://vuejs.org/"> Vue.js </a>
 
-## Recommended IDE Setup
+<!-- elenco icone tech -->
+<img src="https://img.shields.io/badge/VUE-^3.2.41-green" alt="vue badge"/> <img src="https://img.shields.io/badge/Sass-^1.56.1-ff69b4"  alt="sass badge"/> <img src="https://img.shields.io/badge/Fontawsome-^6.2.1-9cf" alt="laravel badge"/>
+<hr/>
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+📌AIM: 
+- develop homepage of a website with the framework Vue.js
+- add some sliders 
+- add some hover animations
+
+<hr/>
+
+<br/>
+
+<img src="https://user-images.githubusercontent.com/36935960/216841321-4ff27f20-1841-4db2-8295-9f17c064cc3f.png" alt="bakery-cover" border="1px solid grey"/>
 
 
-
--------------
-
-
-
-![proj-html-vuejs](https://user-images.githubusercontent.com/36935960/216841321-4ff27f20-1841-4db2-8295-9f17c064cc3f.png)
 
 
 
